@@ -29,7 +29,7 @@ jobs:
     env:
       DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
@@ -40,12 +40,12 @@ jobs:
           xcrun swiftc --version
 
       - name: Run offline regression checks
-        run: scripts/run-checks.sh
+        run: scripts/ci-run.sh scripts/run-checks.sh
 
       - name: Build Standard and Tunnel Debug
         run: |
           for scheme in 'WrapPin Standard' 'WrapPin Tunnel'; do
-            xcodebuild -project WrapPin.xcodeproj -scheme "$scheme" \
+            scripts/ci-run.sh xcodebuild -project WrapPin.xcodeproj -scheme "$scheme" \
               -configuration Debug -destination 'generic/platform=iOS' \
               -derivedDataPath "$RUNNER_TEMP/WrapPin-Debug" \
               CODE_SIGNING_ALLOWED=NO -quiet build
@@ -53,13 +53,13 @@ jobs:
 
       - name: Build Tunnel Release
         run: |
-          xcodebuild -project WrapPin.xcodeproj -scheme 'WrapPin Tunnel' \
+          scripts/ci-run.sh xcodebuild -project WrapPin.xcodeproj -scheme 'WrapPin Tunnel' \
             -configuration Release -destination 'generic/platform=iOS' \
             -derivedDataPath "$RUNNER_TEMP/WrapPin-Tunnel-Release" \
             CODE_SIGNING_ALLOWED=NO -quiet build
 
       - name: Archive and package unsigned Standard IPA
-        run: OUTPUT_DIR="$RUNNER_TEMP/WrapPin-IPAs" scripts/package-ipa.sh standard
+        run: OUTPUT_DIR="$RUNNER_TEMP/WrapPin-IPAs" scripts/ci-run.sh scripts/package-ipa.sh standard
 
       - name: Verify SideStore package, translations and privacy defaults
         run: |
@@ -79,7 +79,7 @@ jobs:
           fi
 
       - name: Upload IPA, checksum and build receipt
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: WrapPin-Standard-SideStore
           path: ${{ runner.temp }}/WrapPin-IPAs/
