@@ -2,6 +2,14 @@
 
 This guide covers WrapPin's development builds and IPA release workflow.
 
+## This fork's SideStore build
+
+The `arena/**` branch workflow in `.github/workflows/ios-ipa.yml` uses the Xcode 27.1 macOS runner. It runs `scripts/run-checks.sh` (including Traditional Chinese bundle matching and cycling), compiles both editions in Debug and Release, and archives/packages **Standard only** for this SideStore request. It does not sign an app, ask for Apple credentials or create an upstream release. Manual dispatch can rebuild a selected branch; increment the build before distributing a different binary.
+
+The `WrapPin-Standard-SideStore` artifact includes the unsigned IPA, `SHA256SUMS.txt` and `receipt.json`. Artifacts expire after 30 days. Download and unzip it, then import the IPA from Files into SideStore. `python3 scripts/verify-ipa.py <file.ipa>` independently verifies ZIP layout, arm64 device identity, version/build, complete zh-Hant/zh-Hans UI/permissions/Siri tables, Shadowrocket handoff, legal resources and absence of an embedded tunnel. It also rejects accidentally configured analytics/Geoapify identifiers in this personal build. The workflow checks Standard has no NetworkExtension linkage.
+
+Linux can run `check-localization.py`, `test-localization.py`, `test-ipa-verification.py` and the IPA validator. Swift/MapKit compilation and packaging need Xcode on macOS; a ZIP fixture passing validator tests is never an installable IPA. Physical pairing, actual cycling coverage, SideStore signing/install and background continuity must be checked separately on a device.
+
 ## Current release tracks
 
 - Current release: `1.0.23`, Build `75`, with fresh pairing identities, dual-stack listening and serialized reset; both unsigned packages are attached to [v1.0.23](https://github.com/suversal/WrapPin/releases/tag/v1.0.23). See the [Build 75 receipt](../Releases/PairingReset-build75/receipt.json).

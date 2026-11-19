@@ -6,6 +6,7 @@
 	<false/>
 	<key>NSPrivacyTrackingDomains</key>
 	<array/>
+	<!-- Optional product-interaction counts include fixed, walking, cycling and driving starts; never route geometry or speed. -->
 	<key>NSPrivacyCollectedDataTypes</key>
 	<array>
 		<dict>

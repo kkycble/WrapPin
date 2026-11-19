@@ -1,8 +1,12 @@
 # WrapPin User Guide
 
-WrapPin lets you choose where your iPhone reports its location. You can hold one fixed place or simulate movement along an Apple Maps walking or driving route.
+WrapPin lets you choose where your iPhone reports its location. You can hold one fixed place or simulate movement along an Apple Maps walking, cycling or driving route.
 
 On iPad, use Show/Hide Controls for the landscape sidebar. Show/Hide Details changes the bottom card without ending the session; Stop remains available when collapsed. See [map controls](iPadLayout.md).
+
+## Interface language
+
+WrapPin follows the system language and supports English, Simplified Chinese and Traditional Chinese. Hong Kong and Taiwan Traditional Chinese preferences select `zh-Hant`. To override the system language, use iOS **Settings → Apps → WrapPin → Language**. If Language is absent, add Traditional Chinese in iOS Language & Region first. Map labels and provider search results are separate from translated app controls.
 
 ## First-time setup
 
@@ -10,13 +14,13 @@ On iOS 18–26, first [create and import an RPPairing file with a computer](iOS2
 
 You need your physical iPhone and Developer Mode. Standard also needs LocalDevVPN or another configured device tunnel; Tunnel uses its built-in tunnel.
 
-1. Open WrapPin and complete the three-page introduction.
+1. Open WrapPin and complete the three-page introduction. On the setup page you can select **Tunnel App**, including Shadowrocket; the choice also remains in Settings.
 2. On **Device Setup**, tap **Pair This Device**.
 3. Allow Local Network access when iOS asks.
 4. Open **Settings → Privacy & Security → Developer Mode → Pair with WrapPin**.
 5. Return to WrapPin to read the generated six-digit code, then enter it in Settings.
-6. Standard: install LocalDevVPN from Device Setup if it is not already installed. Tunnel: allow its built-in VPN configuration when starting a location.
-7. Standard: open LocalDevVPN and connect its local tunnel. Tunnel starts its own tunnel when needed.
+6. Standard: install/configure the selected device tunnel. For Shadowrocket, enable **Include Route 10.7.0.1/32**; LocalDevVPN is not required when that device tunnel works. Tunnel edition: allow its built-in VPN configuration when starting a location.
+7. Standard: connect the selected tunnel and return to WrapPin. Tunnel edition starts its own tunnel when needed.
 
 Pairing is normally required only once. WrapPin stores the pairing record in this iPhone's Keychain and does not upload it.
 
@@ -91,7 +95,7 @@ Only LocalDevVPN startup needs this temporary change. After the secure location 
 1. Choose a destination.
 2. Tap **Preview Walk**.
 3. Check the route, distance, estimated time and arrival time. When Apple Maps suggests several routes, the card lists up to three; choose one there or tap it on the map.
-4. Choose a walking pace, or turn on **Custom walking speed** to select 1–12 km/h in 0.1 km/h steps. For cycling or faster travel, use a driving route where suitable.
+4. Choose a walking pace, or turn on **Custom walking speed** to select 1–12 km/h in 0.1 km/h steps. For cycling, use **Preview Cycle** instead of increasing walking speed.
 5. Tap **Start Walking**.
 
 During the walk:
@@ -108,6 +112,17 @@ At the destination:
 - **Stop & Restore** ends the session and restores the real location.
 
 For UK regional settings, short distances are shown in yards and longer distances in miles.
+
+## Cycling routes
+
+1. Choose a destination and tap **Preview Cycle**.
+2. Select one of the Apple Maps cycling routes on the card or map, if alternatives are available.
+3. Set **Cycling speed** between **1 and 60 km/h**, in 1 km/h steps; the default is **18 km/h**. Duration and arrival time use this constant speed, not hills, traffic or real pedalling.
+4. Tap **Start Cycling**. Pause/Resume, map following and Stop & Restore work like other route modes.
+
+Cycling directions are not available in every region. An unavailable route produces a cycling-specific explanation, never an automatic walking/driving substitute. Use **Custom route** or import GPX and set a suitable constant speed if needed; those points connect directly, not along a bike-route service. Apple cycling routes are not reversed locally because one-way streets may make the return path invalid; plan a new return route instead.
+
+After an interruption, **Resume Cycling** replans from the last saved point using the cycling mode and saved speed. Recovery is always user-initiated. Arrival holds the destination until Stop & Restore. Check your real location in Apple Maps after restoring.
 
 ## Custom routes and GPX import
 
@@ -147,7 +162,7 @@ Under **Settings → Feedback**, **Report a Bug** and **Request a Feature** open
 If a coordinate write or stop cannot be confirmed, recovery options appear in the current run. They also appear after relaunch when an unconfirmed record was saved. The displayed location is the last location you set, not confirmation that it is still active.
 
 - **Resume Location** reconnects to a fixed location.
-- **Resume Walking** prepares the remaining route from the most recently saved point.
+- **Resume Walking**, **Resume Cycling** and **Resume Driving** prepare the remaining route from the most recently saved point with the saved movement mode and speed.
 - **Restore Real Location** reconnects only long enough to clear the simulated location.
 - **My Real Location Is Already Back** dismisses the recovery record without reconnecting.
 
@@ -179,7 +194,7 @@ iOS may periodically remind you that WrapPin uses location in the background. Th
 
 The final introduction page shows **Share Anonymous Usage Statistics** before setup completes. It is off by default and sends nothing unless you choose to switch it on. The choice can be changed at any time under **Settings → Privacy**.
 
-When enabled, WrapPin reports only a small fixed list of activity counts: the app opening or returning to the foreground, app version/build, completed onboarding or pairing, starting a fixed, walking or driving session, updating an already-active location, connection-help prompts, manual retries and successful sessions after retry, and fixed failure-stage, scheduler-reason, operation and recoverable/terminal categories (pairing, location or restoration). No raw error messages are sent. TelemetryDeck adds an approximate event time. WrapPin never includes coordinates, place names, searches, favourites, history, routes, pairing records, PINs, Apple ID, device name or diagnostics.
+When enabled, WrapPin reports only a small fixed list of activity counts: the app opening or returning to the foreground, app version/build, completed onboarding or pairing, starting a fixed, walking, cycling or driving session, updating an already-active location, connection-help prompts, manual retries and successful sessions after retry, and fixed failure-stage, scheduler-reason, operation and recoverable/terminal categories (pairing, location or restoration). No raw error messages are sent. TelemetryDeck adds an approximate event time. WrapPin never includes coordinates, place names, searches, favourites, history, routes, pairing records, PINs, Apple ID, device name or diagnostics.
 
 A random installation identifier is stored in local app storage and irreversibly hashed before sending. No per-launch session identifier is sent. Turning sharing off stops future reporting immediately and removes the local identifier, but it cannot withdraw anonymous events already received by TelemetryDeck. TelemetryDeck says it does not store IP addresses and may retain anonymous events for roughly 7–10 years without guaranteeing an exact deletion date. Counts therefore describe participating installations rather than every installation.
 

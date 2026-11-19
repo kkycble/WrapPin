@@ -13,7 +13,7 @@ WrapPin 可以把 Shadowrocket 作为设备隧道跳转应用。标准版始终�
 
 ## WrapPin 设置
 
-1. 在 WrapPin 的“设置 → 隧道跳转应用”中选择 Shadowrocket。
+1. 在 WrapPin 首次设置页面或“设置 → 隧道跳转应用”中选择 Shadowrocket。Shadowrocket 设备通道正常时无需同时安装或连接 LocalDevVPN。
 2. 完成一次设备配对。
 3. 开始模拟定位。若当前设备通道不可达，WrapPin 会请求 Shadowrocket 开启 VPN。
 4. Shadowrocket 开启后手动返回 WrapPin；WrapPin 会继续检测连接。

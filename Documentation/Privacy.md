@@ -6,11 +6,11 @@ WrapPin is designed to keep sensitive location and pairing information on the iP
 
 ## Information that stays on the iPhone
 
-WrapPin does not send:
+WrapPin does not send the following to its maintainers or usage-statistics service:
 
 - Coordinates, selected places or addresses.
 - Search text, favourites or location history.
-- Walking routes, route progress or pace.
+- Walking, cycling or driving route geometry, progress or speed in usage statistics.
 - Pairing records, pairing PINs or cryptographic material.
 - Apple ID, device name or personal details.
 - Connection diagnostics or support reports.
@@ -22,6 +22,8 @@ The Simulate Favourite shortcut makes favourite names and place descriptions ava
 Overseas place search is optional and only appears in builds that include a Geoapify API key. When you switch the search box to **Overseas** and tap Search, the search text is sent to [Geoapify](https://www.geoapify.com/privacy-policy/) over HTTPS to find candidates; nothing is sent while typing, in domestic mode, or for pasted coordinates. Geoapify can observe connection metadata such as the requesting IP address. The request contains no coordinates, pairing data, device name or diagnostics. Recent results are cached on the iPhone for seven days and a daily search count is stored locally; neither is uploaded or included in usage statistics.
 
 When the app opens, it requests the latest public release metadata from GitHub to check for an update. The request does not include location, pairing or diagnostic data. As with any network request, GitHub can observe connection metadata such as the requesting IP address.
+
+Apple Maps search and walking/cycling/driving directions still use Apple's services: requesting a route provides its start and destination to Apple. Cycling adds only a transport choice to that existing route request. Manual routes and GPX do not upload route geometry for directions. None of that content is included in usage statistics.
 
 ## Optional background location indicator preference
 
@@ -41,7 +43,7 @@ When sharing is enabled, the app may count:
 
 - A participating installation opening the app or returning it to the foreground.
 - Onboarding or pairing being completed.
-- A fixed-location, walking or driving session successfully starting.
+- A fixed-location, walking, cycling or driving session successfully starting. Cycling uses the fixed event name `WrapPin.Location.cyclingStarted`; it adds no location or route field.
 - A location being updated during an active session.
 - The app version and build associated with an event.
 - An approximate event time added by TelemetryDeck.

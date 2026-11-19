@@ -13,11 +13,11 @@
 </p>
 
 <p align="center">
-  <a href="README.md">简体中文</a> · <strong>English</strong>
+  <a href="README.md">简体中文</a> · <a href="README.zh-Hant.md">繁體中文</a> · <strong>English</strong>
 </p>
 
 <p align="center">
-  <strong>Current release:</strong>1.0.23 (Build 75) · <strong>Minimum:</strong>iOS/iPadOS 18.0
+  <strong>This fork:</strong>1.0.26 (Build 94) · <strong>Minimum:</strong>iOS/iPadOS 18.0
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
   <a href="https://x.com/suversal">@suversal on X</a>
 </p>
 
-WrapPin sets a fixed location or moves along a walking or driving route on an iPhone running **iOS 18 or newer**, without a jailbreak and without installing a MITM root certificate. It uses the iOS developer location simulation service. The app interface is available in English and Simplified Chinese and follows the system language.
+WrapPin sets a fixed location or moves along a walking, cycling or driving route on an iPhone running **iOS 18 or newer**, without a jailbreak and without installing a MITM root certificate. It uses the iOS developer location simulation service. The app interface is available in English, Simplified Chinese and Traditional Chinese and follows the system language. You can also choose a language in iOS Settings → Apps → WrapPin → Language.
 
 WrapPin is an unofficial community fork of [Roam Control](https://github.com/seanhowarthdev/Roam-Control) by Sean Howarth, maintained by suversal. Upstream provides the core pairing, fixed-location, walking and restore features. WrapPin adds Simplified Chinese localisation, setup and connection guidance, coordinate-mode selection, driving routes, connection diagnostics and an optional built-in tunnel. It keeps the original author's attribution and is not an official upstream release.
 
@@ -37,6 +37,14 @@ Version 1.0.23 (Build 75) gives new pairing attempts fresh identities, adds dual
 Version 1.0.21 lowers the minimum to iOS/iPadOS 18.0. Initial success was reported on Standard with iOS 26.5 and on iPad with iOS 26. Full Build 71 device regression, iOS 18, Tunnel and other OS versions still need acceptance. See [computer pairing on iOS 18–26](Documentation/iOS26Pairing.md).
 
 Build 71 makes the landscape sidebar hideable and restores bottom-docked cards in portrait/narrow windows. iPad starts compact, with fixed/route session controls retained on collapse. Both unsigned Build 71 packages are recorded in the [receipt](Releases/PanelLayout-build71/receipt.json). The user reported working location and landscape on iPad iOS 26; the new build still needs physical regression. See [iPad layout](Documentation/iPadLayout.md).
+
+## This fork: Traditional Chinese, cycling and Shadowrocket
+
+Build 94 adds Traditional Chinese (including Hong Kong/Taiwan language matching, permission prompts and Siri phrases) and independent Apple Maps cycling simulation. Choose **Preview Cycle**, set 1–60 km/h (default 18), then **Start Cycling**. Cycling coverage depends on Apple Maps; no walking or driving route is silently substituted. Custom routes and GPX are available where cycling directions are absent.
+
+For **SideStore + Shadowrocket**, use **Standard**, not Tunnel. Choose Shadowrocket during onboarding or in **Settings → Tunnel App**, enable **Include Route 10.7.0.1/32** in Shadowrocket, connect it and return to WrapPin. LocalDevVPN is not required with a working Shadowrocket device tunnel. Verify on Wi-Fi first; this does not fix Shadowrocket's existing mobile-data limitation.
+
+The IPA for these fork-only changes is built by [this repository's Actions workflow](https://github.com/kkycble/WrapPin/actions/workflows/ios-ipa.yml), **not** the upstream Releases link above. Download the successful run's `WrapPin-Standard-SideStore` artifact, unzip it, save the IPA to Files and import it into SideStore. The artifact includes its checksum and build receipt. Physical-device acceptance remains separate from the CI build. See the [Traditional Chinese quick start](README.zh-Hant.md).
 
 ## Contents
 
@@ -187,12 +195,12 @@ Check the result in Apple Maps first, not in a third-party app. Other apps may a
 
 To move while a session is active, choose another place and tap **Update Location**. You do not need to pair or reconnect.
 
-### A walking or driving route
+### A walking, cycling or driving route
 
-1. Choose a destination and tap **Preview Walk** or **Preview Drive**.
+1. Choose a destination and tap **Preview Walk**, **Preview Cycle** or **Preview Drive**.
 2. Check the route, distance and estimated time. When Apple Maps offers several routes, choose one on the card or tap it on the map.
-3. Set the speed: a walking pace or 1–12 km/h for walking, 5–240 km/h for driving.
-4. Tap **Start Walking** or **Start Driving**.
+3. Set the speed: a walking pace or 1–12 km/h for walking, 1–60 km/h for cycling (default 18), or 5–240 km/h for driving.
+4. Tap **Start Walking**, **Start Cycling** or **Start Driving**.
 
 You can pause and resume along the way. Routes come from Apple Maps, so WrapPin cannot offer a route where Apple Maps has none. The [user guide](Documentation/UserGuide.md) describes the route controls in full.
 

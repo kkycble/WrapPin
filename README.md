@@ -13,18 +13,18 @@
 </p>
 
 <p align="center">
-  <strong>简体中文</strong> · <a href="README.en.md">English</a>
+  <strong>简体中文</strong> · <a href="README.zh-Hant.md">繁體中文</a> · <a href="README.en.md">English</a>
 </p>
 
 <p align="center">
-  <strong>当前版本：</strong>1.0.23（Build 75） · <strong>最低系统：</strong>iOS/iPadOS 18.0
+  <strong>本分支版本：</strong>1.0.26（Build 94） · <strong>最低系统：</strong>iOS/iPadOS 18.0
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/iOS-18%2B-blue" alt="iOS 18+">
   <img src="https://img.shields.io/badge/UI-SwiftUI-orange" alt="SwiftUI">
   <img src="https://img.shields.io/badge/%E7%BB%B4%E6%8A%A4%E8%80%85-suversal-purple" alt="由 suversal 维护">
-  <img src="https://img.shields.io/badge/Release-1.0.23-blue" alt="Release 1.0.23">
+  <img src="https://img.shields.io/badge/Build-1.0.26--94-blue" alt="Fork build 1.0.26 Build 94">
   <img src="https://img.shields.io/badge/License-PolyForm%20NC%201.0.0-blue" alt="PolyForm Noncommercial 1.0.0">
 </p>
 
@@ -38,7 +38,7 @@ WrapPin 是 Sean Howarth 原项目 [Roam Control](https://github.com/seanhowarth
 
 如果这个项目帮到了你，欢迎点一个 **Star**；如果你发现界面、文案、兼容性或连接流程还有改进空间，也欢迎提交 Issue 或 Pull Request。贡献前请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-项目面向开发、质量测试和个人负责任测试，支持固定位置、步行与驾车路线、收藏与历史记录，并通过配对记录和兼容的设备隧道建立安全的开发者定位会话。默认使用 LocalDevVPN；也可在设置中选择 Shadowrocket、Surge、Loon、Stash、Egern、Quantumult X 或 sing-box，它们需要按各自的配置说明启用 `10.7.0.1` 设备通道，普通代理配置不能提供所需的设备连接。
+项目面向开发、质量测试和个人负责任测试，支持固定位置、步行、骑行与驾车路线、收藏与历史记录，并通过配对记录和兼容的设备隧道建立安全的开发者定位会话。默认使用 LocalDevVPN；也可在设置中选择 Shadowrocket、Surge、Loon、Stash、Egern、Quantumult X 或 sing-box，它们需要按各自的配置说明启用 `10.7.0.1` 设备通道，普通代理配置不能提供所需的设备连接。
 
 > 请只在你拥有并控制的设备上使用。不要用于欺骗他人、伪造证据、规避安全限制，或违反第三方服务规则。
 
@@ -47,6 +47,15 @@ WrapPin 是 Sean Howarth 原项目 [Roam Control](https://github.com/seanhowarth
 1.0.21 将最低系统扩展到 iOS/iPadOS 18.0。标准版 iOS 26.5 和 iPad iOS 26 已收到首轮成功反馈；Build 71 的完整真机回归，以及 iOS 18、隧道版和其他系统版本仍待分别验收。iOS 18–26 的首次配对步骤见[电脑配对说明](Documentation/iOS26Pairing.zh-CN.md)。
 
 Build 71 优化 iPad 面板交互：横向宽窗口侧栏可收起、恢复，竖向与窄窗口的卡片贴底；iPad 默认显示紧凑卡片，固定定位和路线收起后保留主要操作。已生成 Build 71 两版未签名 IPA，见[构建记录](Releases/PanelLayout-build71/receipt.json)；用户已反馈 iPad iOS 26 可定位、可横屏，新包仍需真机回归，见 [iPad 布局说明](Documentation/iPadLayout.zh-CN.md)。
+
+## 本分支新增：繁体中文、骑行与 Shadowrocket 引导
+
+- 完整繁体中文界面、权限说明和 Siri 语句；跟随系统语言，或在系统“设置 → App → WrapPin → 语言”中选择繁体中文。香港与台湾的繁体中文偏好均匹配 `zh-Hant`。
+- 独立实现 Apple 地图骑行路线：选择“预览骑行”，设置 1–60 公里/小时（默认 18），再开始模拟。支持暂停、继续、地图跟随和中断恢复；不自动用步行或驾车路线冒充骑行路线。
+- SideStore + Shadowrocket 使用标准版，在首次设置或“设置 → 隧道跳转应用”选择 Shadowrocket，并开启它的“包含路由 10.7.0.1/32”。可用的 Shadowrocket 设备隧道不需要 LocalDevVPN；蜂窝网络不通时仍需 Wi-Fi。
+- 以上改动的 IPA 来自[本仓库 Actions 构建](https://github.com/kkycble/WrapPin/actions/workflows/ios-ipa.yml)，不是上方的上游 Release。成功后下载 `WrapPin-Standard-SideStore` 成品 ZIP，解压后将 IPA 保存到“文件”，再导入 SideStore；内附校验值和构建记录。真机安装与功能验收仍需单独验证。
+
+详见[繁體中文快速開始](README.zh-Hant.md)。以下保留上游的发布与历史说明。
 
 ## 当前进展
 

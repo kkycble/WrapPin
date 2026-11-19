@@ -13,7 +13,7 @@ With the switch on, connections to `10.7.0.1` enter Shadowrocket's tunnel and co
 
 ## WrapPin settings
 
-1. In WrapPin, choose Shadowrocket under **Settings → Tunnel App**.
+1. In WrapPin, choose Shadowrocket on the onboarding setup page or under **Settings → Tunnel App**. A working Shadowrocket device tunnel replaces LocalDevVPN; you do not need both.
 2. Pair the device once.
 3. Start a location. If the device channel is unreachable, WrapPin asks Shadowrocket to connect its VPN.
 4. After Shadowrocket connects, return to WrapPin manually; WrapPin keeps checking the connection.

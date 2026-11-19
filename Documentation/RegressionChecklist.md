@@ -2,6 +2,18 @@
 
 Use this checklist before packaging an IPA or declaring a development build stable. Test on the physical iPhone unless a row explicitly says the simulator is sufficient.
 
+## Traditional Chinese, cycling and SideStore (Build 94)
+
+- [ ] A Hong Kong or Taiwan Traditional Chinese system preference selects Traditional Chinese; English and Simplified Chinese still work. The per-app iOS language override works after relaunch.
+- [ ] Onboarding, Settings, route controls, recovery/errors, permission prompts and Siri phrases are Traditional Chinese. Format arguments remain correct; large text and VoiceOver can reach all three route-preview buttons.
+- [ ] Select Shadowrocket on the first-run setup page. Setup updates immediately without requiring LocalDevVPN, and the choice survives launch/update. Verify Include Route 10.7.0.1/32 on/off behavior using a Standard IPA installed by SideStore.
+- [ ] Preview Cycle requests cycling directions, offers alternatives where available and shows cycling-specific copy/icons. Where Apple Maps has no cycling coverage, show the custom-route/GPX explanation without substituting walking/driving directions.
+- [ ] Cycling starts at 18 km/h; choose 1, 30 and 60 km/h and check timing and movement. Walking/driving/custom-route speed choices do not leak into cycling.
+- [ ] Start, pause/resume, map following, reconnect freeze, exact arrival and confirmed Stop & Restore work with Shadowrocket on Wi-Fi. On cellular failure, recommend Wi-Fi rather than LocalDevVPN's mobile-data-off flow.
+- [ ] Interrupt/relaunch a cycling session and resume from its last saved point with cycling directions, coordinate mode and speed; recovery never starts automatically. Legacy walking/driving recovery remains decodable.
+- [ ] The Standard IPA has arm64 device code, zh-Hant/zh-Hans tables and permission/shortcut resources, and no PlugIns or NetworkExtension linkage. SideStore signs and installs it, including an update that preserves local choices.
+- [ ] Check real-location restoration in Apple Maps. Signed install, actual route coverage and long locked-screen/background sessions remain device gates, not inferred from CI.
+
 ## Install and launch
 
 - [ ] A clean install opens the three-page introduction.

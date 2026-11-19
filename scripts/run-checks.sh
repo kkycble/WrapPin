@@ -48,7 +48,8 @@ swift_check test-custom-routes \
 swift_check test-route-point-search \
     WrapPin/Features/Map/MapViewModel.swift WrapPin/Features/Map/MapKitCompatibility.swift \
     WrapPin/Features/Map/CoordinateInputParser.swift WrapPin/Features/Map/RouteWaypoint.swift \
-    WrapPin/Models/LocationTarget.swift WrapPin/Services/OverseasPlaceSearch.swift
+    WrapPin/Models/LocationTarget.swift WrapPin/Services/OverseasPlaceSearch.swift \
+    WrapPin/Features/Map/SimulationRoute.swift WrapPin/Features/Map/GPXRouteParser.swift
 
 for check in scripts/test-*.py; do
     if [[ "$check" != scripts/test-localization.py ]]; then

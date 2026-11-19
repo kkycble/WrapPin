@@ -64,11 +64,16 @@ jobs:
       - name: Verify SideStore package, translations and privacy defaults
         run: |
           for ipa in "$RUNNER_TEMP/WrapPin-IPAs/"*.ipa; do
-            python3 scripts/verify-ipa.py "$ipa" --receipt "$RUNNER_TEMP/WrapPin-IPAs/receipt.json"
+            scripts/ci-run.sh python3 scripts/verify-ipa.py "$ipa" --receipt "$RUNNER_TEMP/WrapPin-IPAs/receipt.json"
           done
           cd "$RUNNER_TEMP/WrapPin-IPAs"
           shasum -a 256 ./*.ipa > SHA256SUMS.txt
           cat SHA256SUMS.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          receipt = Path('receipt.json').read_text().replace('%', '%25').replace('\n', '%0A')
+          print(f'::notice title=IPA build receipt::{receipt}')
+          PY
           # Standard must not link the paid-account Network Extension framework.
           executable="${TMPDIR%/}/wrappin-package-build/Standard.xcarchive/Products/Applications/WrapPin.app/WrapPin"
           test -f "$executable"
