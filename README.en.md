@@ -21,7 +21,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/suversal/WrapPin/releases/latest">Download the latest release</a> ·
+  <a href="https://github.com/kkycble/WrapPin/actions/runs/44565587160/artifacts/14550359597">Download this fork: SideStore Build 94 (ZIP)</a> ·
+  <a href="https://github.com/suversal/WrapPin/releases/latest">Upstream releases</a> ·
   <a href="Documentation/UserGuide.md">User guide</a> ·
   <a href="https://x.com/suversal">@suversal on X</a>
 </p>
@@ -44,7 +45,7 @@ Build 94 adds Traditional Chinese (including Hong Kong/Taiwan language matching,
 
 For **SideStore + Shadowrocket**, use **Standard**, not Tunnel. Choose Shadowrocket during onboarding or in **Settings → Tunnel App**, enable **Include Route 10.7.0.1/32** in Shadowrocket, connect it and return to WrapPin. LocalDevVPN is not required with a working Shadowrocket device tunnel. Verify on Wi-Fi first; this does not fix Shadowrocket's existing mobile-data limitation.
 
-The IPA for these fork-only changes is built by [this repository's Actions workflow](https://github.com/kkycble/WrapPin/actions/workflows/ios-ipa.yml), **not** the upstream Releases link above. Download the successful run's `WrapPin-Standard-SideStore` artifact, unzip it, save the IPA to Files and import it into SideStore. The artifact includes its checksum and build receipt. Physical-device acceptance remains separate from the CI build. See the [Traditional Chinese quick start](README.zh-Hant.md).
+**[Download Build 94 for SideStore (ZIP)](https://github.com/kkycble/WrapPin/actions/runs/44565587160/artifacts/14550359597)** — [build and package verification passed](https://github.com/kkycble/WrapPin/actions/runs/44565587160), including all 21 offline checks and both editions' Debug/Release device compilation. This is **not** the upstream release. Sign in to GitHub if prompted; the artifact is retained until 19 December 2026. Unzip it, save the IPA to Files and import it into SideStore. The artifact includes its checksum and build receipt. Physical-device acceptance remains separate from the CI build. See the [Traditional Chinese quick start](README.zh-Hant.md).
 
 ## Contents
 

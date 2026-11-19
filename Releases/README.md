@@ -1,5 +1,18 @@
 # WrapPin releases
 
+## Fork SideStore build — WrapPin 1.0.26, Build 94
+
+Built on 19 November 2026 with Xcode 27.1 (27A9275), from source commit `8674ec2df8eaaa455d9096d079ec9fb77119e095` on `arena/6e45ebf4-wrappin`. This is the `kkycble/WrapPin` fork's Traditional Chinese/cycling package, not an upstream public release. Later documentation-only commits do not change the packaged app.
+
+**[Download Standard for SideStore (ZIP)](https://github.com/kkycble/WrapPin/actions/runs/44565587160/artifacts/14550359597)** · [Successful build](https://github.com/kkycble/WrapPin/actions/runs/44565587160) · [Receipt](TraditionalCycling-build94/receipt.json) · [繁體中文安裝與測試](TraditionalCycling-build94/安裝與測試.md) · [Release notes](../Documentation/Release-1.0.26.md)
+
+- IPA: `WrapPin-Standard-1.0.26-build94-unsigned.ipa`; **7,162,726 bytes**; SHA-256 `0bb1db7b70c6c57a640d347fcc9bfa86e8eea96bf591f270c46337a6f3900b6f`.
+- Bundle ID `com.suversal.wrappin`; unsigned arm64 iPhoneOS Release archive, iOS/iPadOS 18.0+, iPhone/iPad. SideStore signs at installation; no VPN extension or NetworkExtension linkage. No Tunnel IPA was packaged for this request.
+- All **21 offline check invocations**, both editions' Debug device builds, Tunnel Release device build, Standard Release archive, actual IPA content validation and artifact upload **passed**. Traditional Chinese and Simplified Chinese each contain 897 UI keys, 4 Siri phrases and 3 permission descriptions. The native engine is unchanged; native Rust tests and simulator UI checks were not rerun.
+- Use Shadowrocket with **Include Route 10.7.0.1/32** enabled. No LocalDevVPN is required for WrapPin when that device channel works. Shadowrocket's existing mobile-data limitation remains; start testing on Wi-Fi.
+- SideStore signing/installation, real pairing and Shadowrocket reachability, actual regional cycling coverage, location restoration and extended background/lock behavior remain **untested on a physical device**. The receipt/checksum were retrieved from the successful CI check; the sandbox could not download the binary because the artifact-storage host is outside its permitted network hosts. No independent local IPA verification is claimed.
+- The Actions artifact contains the IPA, checksum and receipt and expires **19 December 2026**. Sign in to GitHub if prompted. The binary is stored externally, not committed to Git; the receipt and checksum remain here after expiry. A later distribution rebuild must use a new build number.
+
 ## WrapPin 1.0.25 — Build 93
 
 Unifies domestic route-search suggestions before and after submit, adds tapped places directly, and shows consistent add icons. [Release notes](../Documentation/Release-1.0.25.zh-CN.md) · [Verification](UnifiedSuggestions-build93/测试说明.md) · [Receipt](UnifiedSuggestions-build93/receipt.json).

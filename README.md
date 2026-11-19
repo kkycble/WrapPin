@@ -29,7 +29,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/suversal/WrapPin/releases/latest">下载最新版</a> ·
+  <a href="https://github.com/kkycble/WrapPin/actions/runs/44565587160/artifacts/14550359597">下载本分支 SideStore Build 94（ZIP）</a> ·
+  <a href="https://github.com/suversal/WrapPin/releases/latest">上游发布</a> ·
   <a href="Documentation/UserGuide.zh-CN.md">使用手册</a> ·
   <a href="https://x.com/suversal">在 X 联系 @suversal</a>
 </p>
@@ -53,7 +54,7 @@ Build 71 优化 iPad 面板交互：横向宽窗口侧栏可收起、恢复，�
 - 完整繁体中文界面、权限说明和 Siri 语句；跟随系统语言，或在系统“设置 → App → WrapPin → 语言”中选择繁体中文。香港与台湾的繁体中文偏好均匹配 `zh-Hant`。
 - 独立实现 Apple 地图骑行路线：选择“预览骑行”，设置 1–60 公里/小时（默认 18），再开始模拟。支持暂停、继续、地图跟随和中断恢复；不自动用步行或驾车路线冒充骑行路线。
 - SideStore + Shadowrocket 使用标准版，在首次设置或“设置 → 隧道跳转应用”选择 Shadowrocket，并开启它的“包含路由 10.7.0.1/32”。可用的 Shadowrocket 设备隧道不需要 LocalDevVPN；蜂窝网络不通时仍需 Wi-Fi。
-- 以上改动的 IPA 来自[本仓库 Actions 构建](https://github.com/kkycble/WrapPin/actions/workflows/ios-ipa.yml)，不是上方的上游 Release。成功后下载 `WrapPin-Standard-SideStore` 成品 ZIP，解压后将 IPA 保存到“文件”，再导入 SideStore；内附校验值和构建记录。真机安装与功能验收仍需单独验证。
+- **[下载 Build 94 标准版 SideStore 安装包 ZIP](https://github.com/kkycble/WrapPin/actions/runs/44565587160/artifacts/14550359597)**：[构建与 IPA 校验已成功](https://github.com/kkycble/WrapPin/actions/runs/44565587160)，含 21 项离线检查及两版 Debug／Release 真机编译。这不是上游 Release；如有提示请登录 GitHub，成品保留至 2026-12-19。解压后将 IPA 保存到“文件”，再导入 SideStore；内附校验值和构建记录。真机安装与功能验收仍需单独验证。
 
 详见[繁體中文快速開始](README.zh-Hant.md)。以下保留上游的发布与历史说明。
 

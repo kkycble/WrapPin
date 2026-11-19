@@ -1,0 +1,25 @@
+{
+  "filename": "WrapPin-Standard-1.0.26-build94-unsigned.ipa",
+  "sha256": "0bb1db7b70c6c57a640d347fcc9bfa86e8eea96bf591f270c46337a6f3900b6f",
+  "size_bytes": 7162726,
+  "version": "1.0.26",
+  "build": "94",
+  "build_timestamp": "2026-11-19T16:17:36Z",
+  "bundle_identifier": "com.suversal.wrappin",
+  "minimum_os": "18.0",
+  "architecture": "arm64 (iPhoneOS)",
+  "localizations": {
+    "zh-Hans.lproj/Localizable.strings": 897,
+    "zh-Hans.lproj/AppShortcuts.strings": 4,
+    "zh-Hans.lproj/InfoPlist.strings": 3,
+    "zh-Hant.lproj/Localizable.strings": 897,
+    "zh-Hant.lproj/AppShortcuts.strings": 4,
+    "zh-Hant.lproj/InfoPlist.strings": 3
+  },
+  "signing_method": "Unsigned Release archive; SideStore signs on installation",
+  "physical_device_acceptance": "Not tested; pairing, Shadowrocket, cycling coverage, background use and SideStore installation need a physical device",
+  "source_commit": "8674ec2df8eaaa455d9096d079ec9fb77119e095",
+  "source_branch": "arena/6e45ebf4-wrappin",
+  "build_run": "https://github.com/kkycble/WrapPin/actions/runs/44565587160",
+  "xcode": "Xcode 27.1\nBuild version 27A9275"
+}

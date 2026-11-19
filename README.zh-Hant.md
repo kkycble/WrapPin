@@ -16,7 +16,17 @@ WrapPin 透過 iOS 開發者位置模擬服務，測試固定位置、步行、�
 
 這是未簽署的 Release IPA，由 SideStore 在安裝時簽署。**不要選 Tunnel 版**：其內置 VPN 擴充功能需要付費開發者帳戶的 Packet Tunnel 簽署權限，不能按免費 SideStore 的方式安裝。
 
-本分支的安裝檔由 [GitHub Actions](https://github.com/kkycble/WrapPin/actions/workflows/ios-ipa.yml) 建置，而不是上游的正式發佈。成功建置後，下載 `WrapPin-Standard-SideStore` 成品 ZIP，解壓縮可取得 IPA、SHA-256 及組建記錄。Actions 成品有保留期限；過期後需重新建置。
+**[下載 Build 94：Standard／SideStore 安裝包 ZIP](https://github.com/kkycble/WrapPin/actions/runs/44565587160/artifacts/14550359597)**（如有提示，請先登入 GitHub）。
+
+[GitHub Actions 建置已成功](https://github.com/kkycble/WrapPin/actions/runs/44565587160)：21 項離線檢查、兩個版本的 Debug 與 Release 編譯、Standard 歸檔與 IPA 內容驗證均通過。這不是上游的正式發佈。解壓縮 `WrapPin-Standard-SideStore` ZIP 可取得 IPA、SHA-256 及組建記錄；成品保留至 **2026 年 12 月 19 日**。真機安裝及定位仍待驗收。
+
+IPA 大小 **7,162,726 bytes**；SHA-256（針對 IPA，不是外層 ZIP）：
+
+```text
+0bb1db7b70c6c57a640d347fcc9bfa86e8eea96bf591f270c46337a6f3900b6f
+```
+
+詳見[組建記錄](Releases/TraditionalCycling-build94/receipt.json)及[安裝與測試清單](Releases/TraditionalCycling-build94/安裝與測試.md)。
 
 1. 先完成 SideStore 本身的安裝及設定，確認它可以正常簽署及安裝 App。
 2. 將 IPA 儲存至 iPhone 的「檔案」App。
@@ -37,7 +47,7 @@ App 跟隨 iOS 的語言設定；香港或台灣的繁體中文語言偏好會�
 ## 使用 Shadowrocket，毋須 LocalDevVPN
 
 1. 更新 Shadowrocket，確認其「設定」內有 **Include Route 10.7.0.1/32／包含路由 10.7.0.1/32** 選項，並將它開啟。
-2. 在 WrapPin 首次設定的 **隧道 App** 選擇 Shadowrocket；已完成首次設定的使用者，可在 **設定 → 隧道跳轉應用** 更改。
+2. 在 WrapPin 首次設定的 **隧道跳轉應用** 選擇 Shadowrocket；已完成首次設定的使用者，可在 **設定 → 隧道跳轉應用** 更改。
 3. 連接 Shadowrocket 的 VPN，然後返回 WrapPin。只有一般代理連線，而沒有上述本機路由，並不足夠。
 4. 在 WrapPin 的 **設定 → 連接檢測** 確認裝置通道可連接。
 

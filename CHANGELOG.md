@@ -2,6 +2,14 @@
 
 All notable public changes to WrapPin are recorded here.
 
+## 1.0.26 — Build 94 fork candidate — 2026-11-19
+
+- Add complete Traditional Chinese UI, permission and Siri/Shortcuts resources, including Hong Kong/Taiwan language matching and format/placeholder checks for both Chinese scripts.
+- Independently implement MapKit cycling routes with 1–60 km/h speed (default 18), cycling controls/icons, map following, pause/resume, arrival and user-initiated interrupted-session recovery. Keep existing walking/driving recovery compatibility and never substitute another route type silently.
+- Let users select Shadowrocket during onboarding and show its 10.7.0.1/32 requirement without requiring LocalDevVPN; preserve existing choices and the mobile-data limitation.
+- Add a macOS/Xcode CI workflow and content validation for an unsigned Standard IPA that SideStore can sign; no signing credentials or telemetry keys are needed.
+- Physical SideStore installation, pairing, actual cycling coverage and background/locked-screen acceptance remain pending. See [fork build notes](Documentation/Release-1.0.26.md).
+
 ## [1.0.23] - 2026-11-16
 
 - Give new pairing attempts fresh host identifiers consistent with their new keys; preserve existing saved pairings on ordinary launches.
