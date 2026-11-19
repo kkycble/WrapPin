@@ -11,7 +11,9 @@ struct SimulationRoute {
         let points = polyline.points()
         return (0..<polyline.pointCount).map { points[$0] }
     }
+}
 
+extension SimulationRoute {
     init(_ route: MKRoute) {
         polyline = route.polyline
         distance = route.distance

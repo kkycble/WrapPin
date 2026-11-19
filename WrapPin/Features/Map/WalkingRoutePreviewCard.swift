@@ -134,6 +134,8 @@ struct WalkingRoutePreviewCard: View {
                         customRouteSpeedControl
                     } else if simulation.mode == .walking {
                         pacePicker
+                    } else if simulation.mode == .cycling {
+                        cyclingSpeedControl
                     } else {
                         drivingSpeedControl
                     }
@@ -214,6 +216,24 @@ struct WalkingRoutePreviewCard: View {
                 }
                 .pickerStyle(.segmented)
             }
+        }
+    }
+
+    private var cyclingSpeedControl: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Text("Cycling speed")
+                    .font(.subheadline.weight(.medium))
+                Spacer()
+                Text(cyclingSpeedText)
+                    .font(.subheadline.monospacedDigit().weight(.semibold))
+            }
+            Slider(value: cyclingSpeedBinding, in: RouteMode.cycling.speedRangeKilometresPerHour, step: 1)
+                .accessibilityLabel("Simulated cycling speed")
+                .accessibilityValue(cyclingSpeedText)
+            Text("Constant route speed · 1–60 km/h")
+                .font(.caption)
+                .foregroundStyle(.secondary)
         }
     }
 
@@ -336,8 +356,7 @@ struct WalkingRoutePreviewCard: View {
         case .idle:
             Button(action: onStart) {
                 Label(
-                    route.isCustom ? String(localized: "Start route simulation") : simulation.mode == .walking
-                        ? String(localized: "Start Walking") : String(localized: "Start Driving"),
+                    route.isCustom ? String(localized: "Start route simulation") : simulation.mode.startTitle,
                     systemImage: simulation.mode.symbol
                 )
                 .frame(maxWidth: .infinity)
@@ -350,9 +369,7 @@ struct WalkingRoutePreviewCard: View {
             HStack(spacing: 10) {
                 ProgressView()
                 Text(
-                    route.isCustom ? String(localized: "Starting route simulation…") : simulation.mode == .walking
-                        ? String(localized: "Starting walking session…")
-                        : String(localized: "Starting driving session…")
+                    route.isCustom ? String(localized: "Starting route simulation…") : simulation.mode.startingTitle
                 )
                 .font(.subheadline.weight(.medium))
             }
@@ -565,14 +582,11 @@ struct WalkingRoutePreviewCard: View {
         switch simulation.phase {
         case .idle: route.isCustom ? String(localized: "Custom route") : simulation.mode.title
         case .preparing:
-            route.isCustom ? String(localized: "Preparing route") : simulation.mode == .walking
-                ? String(localized: "Preparing walk") : String(localized: "Preparing drive")
+            route.isCustom ? String(localized: "Preparing route") : simulation.mode.preparingTitle
         case .walking:
-            route.isCustom ? String(localized: "Simulating route") : simulation.mode == .walking
-                ? String(localized: "Walking") : String(localized: "Driving")
+            route.isCustom ? String(localized: "Simulating route") : simulation.mode.activeTitle
         case .paused:
-            route.isCustom ? String(localized: "Route paused") : simulation.mode == .walking
-                ? String(localized: "Walk paused") : String(localized: "Drive paused")
+            route.isCustom ? String(localized: "Route paused") : simulation.mode.pausedTitle
         case .arrived: String(localized: "Arrived")
         case .stopping: String(localized: "Ending route")
         case .failed: String(localized: "Route unavailable")
@@ -645,6 +659,20 @@ struct WalkingRoutePreviewCard: View {
         String(
             format: NSLocalizedString("%.1f km/h", comment: ""),
             simulation.customWalkingSpeedKilometresPerHour ?? 5
+        )
+    }
+
+    private var cyclingSpeedBinding: Binding<Double> {
+        Binding(
+            get: { simulation.cyclingSpeedKilometresPerHour },
+            set: { simulation.cyclingSpeedKilometresPerHour = $0 }
+        )
+    }
+
+    private var cyclingSpeedText: String {
+        String(
+            format: NSLocalizedString("%lld km/h", comment: ""),
+            Int(RouteMode.cycling.clampedSpeedKilometresPerHour(simulation.cyclingSpeedKilometresPerHour).rounded())
         )
     }
 

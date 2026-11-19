@@ -148,7 +148,7 @@ struct HomeView: View {
         }
         .onChange(of: walkingSimulation.distanceTravelled) { _, _ in
             guard followsSimulatedLocation,
-                walkingSimulation.mode == .driving,
+                walkingSimulation.mode != .walking,
                 let coordinate = walkingSimulation.currentCoordinate
             else { return }
             mapModel.center(on: coordinate)
@@ -277,8 +277,8 @@ struct HomeView: View {
                 if let coordinate = walkingSimulation.currentCoordinate {
                     Annotation(String(localized: "Simulated route location"), coordinate: coordinate) {
                         Image(
-                            systemName: walkingRoutePlanner.route?.isCustom == true ? "location.circle.fill" : walkingSimulation.mode == .walking
-                                ? "figure.walk.circle.fill" : "car.circle.fill"
+                            systemName: walkingRoutePlanner.route?.isCustom == true
+                                ? "location.circle.fill" : walkingSimulation.mode.annotationSymbol
                         )
                         .font(.title.weight(.semibold))
                         .foregroundStyle(.white, .green)
@@ -719,7 +719,7 @@ struct HomeView: View {
             Spacer()
 
             VStack(spacing: 10) {
-                if walkingSimulation.mode == .driving,
+                if walkingSimulation.mode != .walking,
                     let coordinate = walkingSimulation.currentCoordinate,
                     let route = walkingRoutePlanner.route
                 {
@@ -731,7 +731,7 @@ struct HomeView: View {
                             mapModel.show(route)
                         }
                     } label: {
-                        Image(systemName: followsSimulatedLocation ? "car.fill" : "car")
+                        Image(systemName: walkingSimulation.mode.symbol)
                             .font(.system(size: min(mapControlSymbolSize, 24), weight: .semibold))
                             .foregroundStyle(followsSimulatedLocation ? .blue : .primary)
                             .frame(width: 44, height: 44)
@@ -740,8 +740,10 @@ struct HomeView: View {
                     .buttonStyle(.plain)
                     .accessibilityLabel(
                         followsSimulatedLocation
-                            ? "Show whole route"
-                            : "Follow simulated car")
+                            ? String(localized: "Show whole route")
+                            : walkingSimulation.mode == .cycling
+                                ? String(localized: "Follow simulated bicycle")
+                                : String(localized: "Follow simulated car"))
                 }
 
                 if shouldShowMapCompass {
@@ -804,7 +806,7 @@ struct HomeView: View {
                 onSelectRoute: selectPreviewedRoute,
                 onStart: {
                     walkingRoutePlanner.discardAlternativeRoutes()
-                    followsSimulatedLocation = walkingSimulation.mode == .driving
+                    followsSimulatedLocation = walkingSimulation.mode != .walking
                     Task { await walkingSimulation.start(using: appModel) }
                 },
                 onTogglePause: walkingSimulation.togglePause,
@@ -1249,26 +1251,11 @@ struct HomeView: View {
                 mode: recovery.routeMode,
                 coordinateMode: routeCoordinateMode
             )
-            if let savedSpeed = recovery.savedRouteSpeed, savedSpeed.isFinite {
-                if route.isCustom {
-                    walkingSimulation.customRouteSpeedKilometresPerHour = savedSpeed * 3.6
-                } else if recovery.routeMode == .walking {
-                    if let recoveredPace = WalkingPace.allCases.first(where: {
-                        abs($0.metresPerSecond - savedSpeed) < 0.0001
-                    }) {
-                        walkingSimulation.pace = recoveredPace
-                        walkingSimulation.customWalkingSpeedKilometresPerHour = nil
-                    } else {
-                        walkingSimulation.customWalkingSpeedKilometresPerHour = min(
-                            max(savedSpeed * 3.6, 1), 12)
-                    }
-                } else if recovery.routeMode == .driving {
-                    walkingSimulation.drivingSpeedKilometresPerHour = min(
-                        max(savedSpeed * 3.6, 5), 240)
-                }
+            if let savedSpeed = recovery.savedRouteSpeed {
+                walkingSimulation.restoreSpeed(metresPerSecond: savedSpeed)
             }
             mapModel.show(route)
-            followsSimulatedLocation = recovery.routeMode == .driving
+            followsSimulatedLocation = recovery.routeMode != .walking
             isPreparingRecoveredWalk = false
             await walkingSimulation.start(using: appModel)
         }

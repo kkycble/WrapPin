@@ -38,7 +38,6 @@ struct ConnectionRetryTelemetry {
 }
 enum FailureDisposition { case terminal, recoverable }
 enum SchedulerFailureReason { case unknown }
-enum RouteMode: String, Codable { case walking, driving }
 @MainActor final class AppModel {
     enum PairingStatus { case paired }
     let pairingStatus = PairingStatus.paired
@@ -263,6 +262,7 @@ paths = [
     'WrapPin/Services/LocationSessionReconnectPolicy.swift',
     'WrapPin/Services/Tunnel/NetServiceEndpointResolver.swift',
     'WrapPin/Services/Tunnel/LocalDeviceSessionCoordinator.swift',
+    'WrapPin/Features/Map/RouteMode.swift',
     'WrapPin/Features/Map/RouteHitTesting.swift',
     'WrapPin/Features/Map/SimulationRoute.swift',
     'WrapPin/Features/Map/GPXRouteParser.swift',

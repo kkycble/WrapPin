@@ -182,14 +182,8 @@ struct SessionRecoveryView: View {
 
     private var summaryText: String {
         if let destination = recovery.destination, recovery.isRoute {
-            let key = recovery.routeMode == .walking
-                ? "WrapPin closed before it could confirm that the simulated walk to %@ ended. Continue from the last saved point or restore this iPhone's real location."
-                : "WrapPin closed before it could confirm that the simulated drive to %@ ended. Continue from the last saved point or restore this iPhone's real location."
             return String(
-                format: NSLocalizedString(
-                    key,
-                    comment: ""
-                ),
+                format: recovery.routeMode.interruptedSummaryFormat,
                 destination.name
             )
         }
@@ -205,9 +199,7 @@ struct SessionRecoveryView: View {
 
     private var resumeTitle: String {
         if recovery.isRoute {
-            return recovery.routeMode == .walking
-                ? String(localized: "Resume Walking")
-                : String(localized: "Resume Driving")
+            return recovery.routeMode.resumeTitle
         }
         return String(localized: "Resume Location")
     }

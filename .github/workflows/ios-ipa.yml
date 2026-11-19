@@ -1,0 +1,88 @@
+name: Build SideStore IPA
+
+on:
+  push:
+    branches:
+      - 'arena/**'
+    paths:
+      - '.github/workflows/ios-ipa.yml'
+      - 'Configuration/**'
+      - 'Frameworks/**'
+      - 'WrapPin/**'
+      - 'WrapPin.xcodeproj/**'
+      - 'WrapPinTunnel/**'
+      - 'scripts/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-ipa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  standard-ipa:
+    name: Check both editions and package Standard
+    runs-on: xcode-27
+    timeout-minutes: 45
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.1.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Record toolchain
+        run: |
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+          xcrun swiftc --version
+
+      - name: Run offline regression checks
+        run: scripts/run-checks.sh
+
+      - name: Build Standard and Tunnel Debug
+        run: |
+          for scheme in 'WrapPin Standard' 'WrapPin Tunnel'; do
+            xcodebuild -project WrapPin.xcodeproj -scheme "$scheme" \
+              -configuration Debug -destination 'generic/platform=iOS' \
+              -derivedDataPath "$RUNNER_TEMP/WrapPin-Debug" \
+              CODE_SIGNING_ALLOWED=NO -quiet build
+          done
+
+      - name: Build Tunnel Release
+        run: |
+          xcodebuild -project WrapPin.xcodeproj -scheme 'WrapPin Tunnel' \
+            -configuration Release -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/WrapPin-Tunnel-Release" \
+            CODE_SIGNING_ALLOWED=NO -quiet build
+
+      - name: Archive and package unsigned Standard IPA
+        run: OUTPUT_DIR="$RUNNER_TEMP/WrapPin-IPAs" scripts/package-ipa.sh standard
+
+      - name: Verify SideStore package, translations and privacy defaults
+        run: |
+          for ipa in "$RUNNER_TEMP/WrapPin-IPAs/"*.ipa; do
+            python3 scripts/verify-ipa.py "$ipa" --receipt "$RUNNER_TEMP/WrapPin-IPAs/receipt.json"
+          done
+          cd "$RUNNER_TEMP/WrapPin-IPAs"
+          shasum -a 256 ./*.ipa > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+          # Standard must not link the paid-account Network Extension framework.
+          executable="${TMPDIR%/}/wrappin-package-build/Standard.xcarchive/Products/Applications/WrapPin.app/WrapPin"
+          test -f "$executable"
+          dependencies="$(otool -L "$executable")"
+          if grep -q NetworkExtension <<< "$dependencies"; then
+            echo 'Standard unexpectedly links NetworkExtension' >&2
+            exit 1
+          fi
+
+      - name: Upload IPA, checksum and build receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: WrapPin-Standard-SideStore
+          path: ${{ runner.temp }}/WrapPin-IPAs/
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0

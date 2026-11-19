@@ -1,7 +1,7 @@
 import Foundation
 
 // Compile with the production SessionRecoveryRecord.swift to verify persisted JSON compatibility.
-enum RouteMode: String, Codable { case walking, driving }
+enum RouteMode: String, Codable { case walking, cycling, driving }
 enum FixedCoordinateMode: String, Codable { case gcj02, wgs84 }
 struct LocationTarget: Codable, Equatable { let name: String }
 
@@ -45,6 +45,25 @@ struct RouteRecoveryCheck {
         precondition(restored.kind == .drivingRoute && restored.routeMode == .driving)
         precondition(restored.fixedCoordinateMode == .wgs84)
         precondition(abs((restored.savedRouteSpeed ?? 0) * 3.6 - 100) < 0.0001)
+        let cycling = SessionRecoveryRecord.route(
+            from: LocationTarget(name: "Cycle start"),
+            to: LocationTarget(name: "Cycle end"),
+            mode: .cycling,
+            coordinateMode: .wgs84,
+            speedMetresPerSecond: 18 / 3.6
+        )
+        let restoredCycle = try decoder.decode(
+            SessionRecoveryRecord.self, from: JSONEncoder().encode(cycling)
+        )
+        precondition(restoredCycle == cycling)
+        precondition(restoredCycle.kind == .cyclingRoute && restoredCycle.isRoute)
+        precondition(restoredCycle.routeMode == .cycling && restoredCycle.savedRouteSpeed == 5)
+        precondition(restoredCycle.fixedCoordinateMode == .wgs84)
+        precondition(restoredCycle.walkingPaceMetresPerSecond == nil)
+        // Records may have a kind but no destination; never offer route recovery for those.
+        var incompleteCycle = cycling
+        incompleteCycle.destination = nil
+        precondition(!incompleteCycle.isRoute)
         var progressed = driving
         progressed.lastReportedLocation = LocationTarget(name: "Mid-route")
         progressed.updatedAt = Date(timeIntervalSinceReferenceDate: 321)
@@ -63,6 +82,6 @@ struct RouteRecoveryCheck {
         precondition(restoredGeometry.customRoutePoints == custom.customRoutePoints)
         precondition(restoredGeometry.nextCustomRoutePointIndex == 1)
         precondition(oldWalk.customRoutePoints == nil && oldWalk.nextCustomRoutePointIndex == nil)
-        print("Route recovery: legacy walking, custom walking, driving and latest route progress passed")
+        print("Route recovery: legacy walking, custom walking, cycling, driving and latest route progress passed")
     }
 }

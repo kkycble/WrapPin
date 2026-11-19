@@ -1,0 +1,3 @@
+"NSLocalNetworkUsageDescription" = "WrapPin 需要使用本地網絡，通過兼容的裝置隧道配對並連接這部 iPhone。";
+"NSLocationWhenInUseUsageDescription" = "WrapPin 使用定位服務來保持測試定位在背景執行，並在結束後讓地圖回到真實位置。";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "允許「永遠」訪問定位，以減少 WrapPin 在背景保持模擬時的藍色定位指示器顯示。背景保持收到的座標不會儲存或上傳。";

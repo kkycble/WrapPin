@@ -3,6 +3,7 @@ import Foundation
 // Minimal route mode for compiling the persisted recovery model outside Xcode.
 enum RouteMode: String, Codable {
     case walking
+    case cycling
     case driving
 }
 

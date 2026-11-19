@@ -146,5 +146,84 @@ struct CustomRouteChecks {
         precondition(simulation.phase == .idle)
         simulation.reset()
         print("Custom routes: local geometry, date line, GPX segments, invalid input, bounds, movement, pause, reconnect, stop, arrival and return passed")
+        try await checkCycling()
+    }
+
+    @MainActor
+    static func checkCycling() async throws {
+        // Exercise Apple-directions geometry without asking MapKit's servers for
+        // a route. A custom route alone would not exercise mode-specific speeds.
+        let start = CLLocationCoordinate2D(latitude: 22.383, longitude: 114.189)
+        let end = CLLocationCoordinate2D(latitude: 22.393, longitude: 114.189)
+        let geometry = try SimulationRoute(coordinates: [start, end], name: "Cycle")
+        let route = SimulationRoute(polyline: geometry.polyline, distance: geometry.distance,
+                                    name: geometry.name, isCustom: false)
+        let destination = LocationTarget(name: "Cycle end", subtitle: "", latitude: end.latitude, longitude: end.longitude)
+        precondition(RouteMode.allCases == [.walking, .cycling, .driving])
+        precondition(RouteMode.cycling.transportType == .cycling)
+        precondition(RouteMode.walking.transportType == .walking)
+        precondition(RouteMode.driving.transportType == .automobile)
+        precondition(RouteMode.cycling.symbol == "bicycle")
+        precondition(RouteMode.cycling.annotationSymbol == "bicycle.circle.fill")
+        precondition(!RouteMode.cycling.noRouteMessage.isEmpty)
+        precondition(!RouteMode.cycling.directionsUnavailableMessage.isEmpty)
+
+        let cyclist = WalkingSimulationController()
+        let model = AppModel()
+        cyclist.prepare(route: route, destination: destination, mode: .cycling, coordinateMode: .wgs84)
+        precondition(cyclist.mode == .cycling && cyclist.speedMetresPerSecond == 5)
+        precondition(abs(cyclist.remainingDuration - route.distance / 5) < 0.001)
+        // Cycling must not inherit the walking cap or driving speed.
+        cyclist.customWalkingSpeedKilometresPerHour = 12
+        cyclist.drivingSpeedKilometresPerHour = 240
+        for (input, expected) in [(0.0, 1.0), (30, 30), (999, 60), (.nan, 18), (.infinity, 18), (-.infinity, 18)] {
+            cyclist.cyclingSpeedKilometresPerHour = input
+            precondition(abs(cyclist.speedMetresPerSecond * 3.6 - expected) < 0.0001)
+        }
+        cyclist.restoreSpeed(metresPerSecond: 30 / 3.6)
+        precondition(abs(cyclist.speedMetresPerSecond * 3.6 - 30) < 0.0001)
+        cyclist.restoreSpeed(metresPerSecond: .nan)
+        precondition(abs(cyclist.speedMetresPerSecond * 3.6 - 30) < 0.0001)
+        cyclist.restoreSpeed(metresPerSecond: 100)
+        precondition(abs(cyclist.speedMetresPerSecond * 3.6 - 60) < 0.0001)
+        cyclist.restoreSpeed(metresPerSecond: 5)
+        await cyclist.start(using: model)
+        precondition(model.capturedMode == .cycling && model.capturedSpeed == 5)
+        precondition(cyclist.phase == .preparing)
+        cyclist.handleDeviceSessionPhase(.active, deviceSession: model.deviceSession, appModel: model)
+        try await Task.sleep(for: .milliseconds(1150))
+        precondition(cyclist.distanceTravelled > 0 && cyclist.distanceTravelled < 30)
+        precondition(!model.deviceSession.updates.isEmpty)
+        cyclist.togglePause()
+        let heldDistance = cyclist.distanceTravelled
+        try await Task.sleep(for: .milliseconds(1100))
+        precondition(cyclist.phase == .paused && cyclist.distanceTravelled == heldDistance)
+        cyclist.togglePause()
+        model.deviceSession.isReconnecting = true
+        try await Task.sleep(for: .milliseconds(1100))
+        precondition(cyclist.distanceTravelled == heldDistance)
+        model.deviceSession.isReconnecting = false
+        try await Task.sleep(for: .milliseconds(1100))
+        precondition(cyclist.distanceTravelled > heldDistance)
+        cyclist.stop(using: model.deviceSession)
+        precondition(cyclist.phase == .stopping && model.deviceSession.phase == .stopping)
+        cyclist.handleDeviceSessionPhase(.idle, deviceSession: model.deviceSession, appModel: model)
+        precondition(cyclist.phase == .idle && cyclist.currentCoordinate == nil)
+
+        let nearEnd = CLLocationCoordinate2D(latitude: start.latitude + 0.000002, longitude: start.longitude)
+        let shortGeometry = try SimulationRoute(coordinates: [start, nearEnd], name: "Short cycle")
+        let shortRoute = SimulationRoute(polyline: shortGeometry.polyline, distance: shortGeometry.distance,
+                                         name: shortGeometry.name, isCustom: false)
+        let nearDestination = LocationTarget(name: "Arrival", subtitle: "", latitude: nearEnd.latitude, longitude: nearEnd.longitude)
+        cyclist.prepare(route: shortRoute, destination: nearDestination, mode: .cycling, coordinateMode: .wgs84)
+        await cyclist.start(using: model)
+        cyclist.handleDeviceSessionPhase(.active, deviceSession: model.deviceSession, appModel: model)
+        try await Task.sleep(for: .milliseconds(1100))
+        precondition(cyclist.phase == .arrived && cyclist.currentCoordinate?.latitude == nearEnd.latitude)
+        // A directed cycling route might contain one-way streets; unlike a walk,
+        // it must not simply be reversed and advertised as cycling directions.
+        precondition(cyclist.prepareReturnTrip() == nil)
+        cyclist.reset()
+        print("Cycling: MapKit transport, independent speed, bounds, recovery speed, movement, pause, reconnect, stop and exact arrival passed")
     }
 }

@@ -603,6 +603,7 @@ final class AppModel {
             }
             switch recovery.kind {
             case .walkingRoute: pendingSessionAnalyticsEvent = .walkingStarted
+            case .cyclingRoute: pendingSessionAnalyticsEvent = .cyclingStarted
             case .drivingRoute: pendingSessionAnalyticsEvent = .drivingStarted
             case .fixedLocation: pendingSessionAnalyticsEvent = .fixedLocationStarted
             }

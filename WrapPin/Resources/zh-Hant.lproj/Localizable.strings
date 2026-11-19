@@ -1,0 +1,1008 @@
+/* General */
+"Done" = "完成";
+"Cancel" = "取消";
+"Continue" = "繼續";
+"Try Again" = "再試一次";
+"OK" = "好";
+"None" = "無";
+"Unknown" = "未知";
+"Ready" = "已就緒";
+"Active" = "模擬定位中";
+"Problem" = "異常";
+"Failed" = "失敗";
+"Passed" = "通過";
+"Checking" = "正在檢查";
+"Connecting" = "正在連接";
+"Not paired" = "未配對";
+"Set up iPhone" = "設定本機";
+"Connecting…" = "正在連接…";
+"Session active" = "模擬定位中";
+"Connection error" = "連接錯誤";
+
+/* Connection stages */
+"Idle" = "空閒";
+"Checking network" = "正在檢查網絡";
+"Opening LocalDevVPN" = "正在開啟 LocalDevVPN";
+"Discovering this iPhone" = "正在發現這部 iPhone";
+"Verifying paired device" = "正在驗證已配對裝置";
+"Waiting for system resources" = "正在等待系統資源";
+"Opening secure session" = "正在建立安全工作階段";
+"Location session active" = "模擬定位中";
+"Restoring real location" = "正在恢復真實位置";
+"Connection failed" = "連接失敗";
+"Discovered automatically" = "已自動發現";
+"Default address fallback" = "使用預設備用地址";
+
+/* Settings */
+"Settings" = "設定";
+"Appearance" = "外觀";
+"Theme" = "主題";
+"Map Style" = "地圖樣式";
+"Device" = "裝置";
+"Privacy" = "私隱";
+"About" = "關於";
+"Connection Health" = "連接檢測";
+"Pairing & Connection" = "配對與連接";
+"Share Anonymous Usage Statistics" = "分享匿名使用統計資料";
+"What Is Shared" = "分享哪些資料";
+"About WrapPin" = "關於 WrapPin";
+"Version" = "版本";
+"Build" = "組建編號";
+"Built" = "組建時間";
+"Replay Introduction" = "重新查看介紹";
+"Reset WrapPin" = "重置 WrapPin";
+"Reset WrapPin?" = "要重置 WrapPin 嗎？";
+"Reset App" = "重置 App";
+"Reset could not finish" = "無法完成重置";
+"Your pairing record and local choices will be removed. You will return to the welcome screen." = "配對記錄和本地設定將被刪除，然後返回歡迎頁。";
+"This clears the pairing record and local app settings, then shows onboarding again. It does not remove or change LocalDevVPN." = "這會清除配對記錄和本地設定，然後重新顯示引導。不會刪除或更改 LocalDevVPN。";
+"Optional and off by default. Helps estimate activity from participating installations. Locations, searches and pairing data are never included." = "此功能可選且預設關閉，僅用於瞭解參與使用者的使用情況，不包含位置、搜尋和配對資料。";
+
+/* Device setup */
+"Device Setup" = "裝置設定";
+"Pair This iPhone" = "配對這部 iPhone";
+"Cancel Pairing" = "取消配對";
+"Import Existing File" = "匯入現有檔案";
+"Replace Pairing File" = "替換配對檔案";
+"Remove Pairing" = "移除配對";
+"Remove this pairing record?" = "要移除這份配對記錄嗎？";
+"Fingerprint" = "指紋";
+"Added" = "添加時間";
+"Preparing a secure pairing session…" = "正在準備安全配對工作階段…";
+"Finish in Settings" = "請前往系統設定完成";
+"Open Settings › Privacy & Security › Developer Mode." = "開啟「設定 › 私隱與保安 › 開發者模式」。";
+"Tap Pair with WrapPin." = "輕點「與 WrapPin 配對」。";
+"Use the code shown here when iOS asks for it." = "iOS 要求輸入驗證碼時，請使用此處顯示的驗證碼。";
+"Enter this code in Settings" = "在系統設定中輸入此驗證碼";
+"The code is generated on this iPhone and expires with this pairing attempt." = "該驗證碼在本機生成，並會隨本次配對嘗試結束而失效。";
+"Securing the pairing record in Keychain…" = "正在將配對記錄安全地儲存至鑰匙圈…";
+"Stopping pairing…" = "正在停止配對…";
+"Before connecting" = "連接前的準備";
+"Stored securely" = "已安全儲存";
+"On-device pairing needs your physical iPhone." = "本機配對需要使用真實 iPhone。";
+"Pair this iPhone here, or import its existing RPPairing file." = "在此配對這部 iPhone，或匯入它現有的 RPPairing 檔案。";
+"Install %@ and switch it on." = "安裝 %@ 並開啟隧道。";
+"Keep Developer Mode enabled on the iPhone." = "保持 iPhone 的開發者模式已開啟。";
+"Step %@. %@" = "第 %1$@ 步：%2$@";
+"Pairing code %@" = "配對碼 %@";
+"New on-device pairing is available on iOS 27. The simulator can test the screen, but Apple only exposes the real handshake on a physical iPhone." = "iOS 27 支援新的本機配對流程。模擬器只能測試介面，真實配對必須在實體 iPhone 上完成。";
+"The pairing record is generated or checked on this iPhone, then stored only in its Keychain. WrapPin does not upload it." = "配對記錄會在這部 iPhone 上生成或驗證，隨後僅存入本機鑰匙圈。WrapPin 不會上傳它。";
+
+/* Main location controls */
+"Search places or coordinates" = "搜尋地點或輸入座標";
+"Choose a location" = "選擇位置";
+"Search above or tap anywhere on the map." = "在上方搜尋，或輕點地圖上的任意位置。";
+"Start Location" = "開始模擬定位";
+"Stop Location" = "停止並恢復真實位置";
+"Update Location" = "更換模擬位置";
+"Starting Location…" = "正在啟動定位…";
+"Stopping Location…" = "正在恢復真實位置…";
+"Finding This iPhone…" = "正在查找這部 iPhone…";
+"Opening LocalDevVPN…" = "正在開啟 LocalDevVPN…";
+"Preview Walking Route" = "預覽步行路線";
+"Planning Walking Route…" = "正在規劃步行路線…";
+"Get LocalDevVPN" = "安裝 LocalDevVPN";
+"Clear search" = "清除搜尋";
+"Dismiss keyboard" = "收起鍵盤";
+"Add to favourites" = "添加到收藏";
+"Remove from favourites" = "從收藏中移除";
+"Clear selected location" = "清除已選位置";
+"Start when ready. Stop restores this iPhone's real location." = "準備好後即可開始。停止後會恢復這部 iPhone 的真實位置。";
+"Pair this iPhone before starting location control." = "開始位置控制前，請先配對這部 iPhone。";
+"WrapPin will return automatically after the tunnel starts." = "隧道啟動後，WrapPin 會自動返回。";
+"Finding the paired iPhone through the private local tunnel." = "正在通過本地私有隧道查找已配對的 iPhone。";
+"Opening the secure location session." = "正在建立安全定位工作階段。";
+"Currently using %@. Update to move to %@." = "當前使用 %@。更新後將移動到 %@。";
+"This iPhone is using %@. Stop to restore its real location." = "這部 iPhone 當前使用 %@。停止後將恢復真實位置。";
+"Restoring this iPhone's real location." = "正在恢復這部 iPhone 的真實位置。";
+
+/* Pairing status */
+"Preparing pairing" = "正在準備配對";
+"Ready in Settings" = "請在系統設定中繼續";
+"Pairing code ready" = "配對碼已生成";
+"Finishing pairing" = "正在完成配對";
+"Stopping pairing" = "正在停止配對";
+"Pairing problem" = "配對異常";
+"Checking this iPhone" = "正在檢查這部 iPhone";
+"Checking pairing file" = "正在檢查配對檔案";
+"Pairing required" = "需要配對";
+"Pairing file ready" = "配對檔案已就緒";
+"Starting a private session on this iPhone." = "正在這部 iPhone 上啟動私有工作階段。";
+"WrapPin is visible to the iOS pairing screen." = "iOS 配對頁面現在可以發現 WrapPin。";
+"Enter the six-digit code in Settings to confirm." = "請在系統設定中輸入六位數配對碼完成確認。";
+"The handshake worked. Saving its keys securely." = "握手已成功，正在安全儲存金鑰。";
+"Closing the local session and advertisement." = "正在關閉本地工作階段和廣播。";
+"Looking for a securely stored pairing record." = "正在查找安全儲存的配對記錄。";
+"Validating the record and its keys." = "正在驗證配對記錄及金鑰。";
+"Create the pairing securely on this iPhone, or import an existing file." = "可在這部 iPhone 上安全創建配對，或匯入現有配對檔案。";
+"Connect your physical iPhone to create the pairing, or import an existing file." = "請連接實體 iPhone 創建配對，或匯入現有配對檔案。";
+"WrapPin can use this record when the %@ tunnel is connected." = "%@ 隧道連接後，WrapPin 即可使用這份配對記錄。";
+
+/* Mobile data guidance */
+"Still Connecting" = "仍在連接";
+"Turn Mobile Data Off" = "請暫時關閉流動網絡";
+"Turn Mobile Data Back On" = "現在可以重新開啟流動網絡";
+"Open LocalDevVPN" = "開啟 LocalDevVPN";
+"I'm Using Mobile Data" = "我正在使用流動網絡";
+"Detecting this iPhone…" = "正在檢測這部 iPhone…";
+"Location is active" = "模擬定位已啓用";
+"If you're on Wi‑Fi, make sure LocalDevVPN says Connected, then try again. Choose mobile data only when you're actually using 4G or 5G." = "如果正在使用 Wi-Fi，請確認 LocalDevVPN 顯示已連接，然後再試一次。只有當前確實使用 4G/5G 時才選擇流動網絡流程。";
+"Make sure LocalDevVPN is connected, switch mobile data off briefly, then return to WrapPin." = "請確認 LocalDevVPN 已連接，暫時關閉流動網絡，然後返回 WrapPin。";
+"The secure location session is ready. You can restore mobile data now; spoofing will continue over 5G." = "安全定位工作階段已就緒。現在可以恢復流動網絡，模擬定位會繼續保持。";
+
+/* Diagnostics */
+"Connection Stage" = "當前階段";
+"Device Address" = "裝置地址";
+"Location Session" = "定位工作階段";
+"Pairing" = "配對";
+"Current Location" = "當前位置";
+"Place" = "地點";
+"Coordinates" = "座標";
+"Area" = "區域";
+"Run Connection Check" = "執行連接檢查";
+"Connection Check" = "連接檢查";
+"Last checked" = "上次檢查";
+"Last session error" = "上次工作階段錯誤";
+"Check LocalDevVPN, then run the connection check or try starting the location again." = "請檢查 LocalDevVPN，然後執行連接檢查，或重新啟動模擬定位。";
+"Share Diagnostics" = "分享診斷資訊";
+"Open LocalDevVPN in App Store" = "在 App Store 中開啟 LocalDevVPN";
+"Connected" = "已連接";
+"Not checked" = "未檢查";
+"Reachable" = "可連接";
+"Not reachable" = "無法連接";
+"Inactive" = "未啓用";
+"Finding this iPhone" = "正在查找這部 iPhone";
+"Stopping" = "正在停止";
+"Not resolved" = "未解析";
+"Not run" = "未執行";
+"Running" = "正在執行";
+
+/* Appearance values */
+"Auto" = "跟隨系統";
+"Light" = "淺色";
+"Dark" = "深色";
+"Standard" = "標準";
+"Satellite" = "衞星";
+"Hybrid" = "混合";
+
+/* Error messages used by the session coordinator */
+"A real iPhone is required to start a location session." = "啟動定位工作階段需要使用真實 iPhone。";
+"WrapPin could not update the active location." = "WrapPin 無法更新當前位置。";
+"Install LocalDevVPN before starting a location session." = "請先安裝 LocalDevVPN，再啟動定位工作階段。";
+"WrapPin could not prepare the selected location." = "WrapPin 無法準備已選位置。";
+"iOS could not prepare the location session. Close WrapPin, reopen it, and try again." = "iOS 無法準備定位工作階段。請完全關閉 WrapPin，重新開啟後再試。";
+"WrapPin lost the location session details." = "WrapPin 丟失了定位工作階段資訊。";
+"WrapPin could not start its location engine." = "WrapPin 無法啟動定位引擎。";
+"The paired iPhone was announced, but its LocalDevVPN address was not reachable. Reconnect LocalDevVPN and check its device and tunnel IP settings." = "已發現配對的 iPhone，但無法連接其 LocalDevVPN 地址。請重連 LocalDevVPN，並檢查裝置 IP 和隧道 IP 設定。";
+"WrapPin found an outdated device announcement. Toggle LocalDevVPN off and on, then try again." = "WrapPin 發現了過期的裝置廣播。請關閉再開啟 LocalDevVPN，然後再試一次。";
+"WrapPin found an outdated device announcement. Restart the selected tunnel and try again." = "WrapPin 發現了過期的裝置廣播。請重啓所選隧道後再試一次。";
+"WrapPin could not find this iPhone through the device tunnel. Check the selected tunnel and try again." = "WrapPin 無法通過裝置隧道找到這部 iPhone。請檢查所選隧道後再試一次。";
+"Local Network access is required to find this iPhone." = "需要本地網絡權限才能查找這部 iPhone。";
+
+/* Connection diagnostics */
+"This iPhone is not paired. Open Pairing & Connection and pair it first." = "這部 iPhone 尚未配對。請先開啟「配對與連接」完成配對。";
+"The secure location session is active and responding." = "安全定位工作階段正在執行且響應正常。";
+"WrapPin is already changing the connection. Let it finish, then run the check again." = "WrapPin 正在調整連接。請等待完成後再次檢查。";
+"LocalDevVPN reachability can only be checked on a physical iPhone." = "LocalDevVPN 連通性只能在實體 iPhone 上檢查。";
+"LocalDevVPN is visible, but its device announcement does not match the paired iPhone. Toggle LocalDevVPN off and on, then try again." = "已發現 LocalDevVPN，但裝置廣播與已配對 iPhone 不匹配。請關閉再開啟 LocalDevVPN，然後再試一次。";
+"This iPhone was not reachable through LocalDevVPN. Check that the tunnel is connected. On mobile data, switch data off briefly and run the check again." = "無法通過 LocalDevVPN 連接這部 iPhone。請確認隧道已連接；如果正在使用流動網絡，請暫時關閉流動數據後再次檢查。";
+"The pairing record is valid and this iPhone is reachable through LocalDevVPN." = "配對記錄有效，且可通過 LocalDevVPN 連接這部 iPhone。";
+"Local Network access is unavailable. Allow it in iPhone Settings, then try again." = "本地網絡權限不可用。請在 iPhone 系統設定中允許後再試一次。";
+
+/* Pairing failures */
+"iOS could not register the secure pairing task. Close WrapPin, reopen it, and try again." = "iOS 無法註冊安全配對任務。請完全關閉 WrapPin，重新開啟後再試一次。";
+"iOS could not keep pairing active in the background. Keep WrapPin open and try again." = "iOS 無法在背景保持配對任務。請保持 WrapPin 在前景並再試一次。";
+"Pairing took too long. Return to WrapPin and try again." = "配對超時。請返回 WrapPin 後再試一次。";
+"Pairing took too long. Please try again." = "配對超時，請再試一次。";
+"Local Network access is required. Enable it in Settings › Apps › WrapPin, then try again." = "需要本地網絡權限。請在「設定 › App › WrapPin」中開啟後再試一次。";
+"WrapPin could not securely store the new pairing." = "WrapPin 無法安全儲存新的配對記錄。";
+"The code was not accepted. Start pairing again and enter the new code." = "配對碼未被接受。請重新開始配對並輸入新驗證碼。";
+"The iPhone ended the pairing connection. Start pairing again when you are ready." = "iPhone 已結束配對連接。準備好後請重新開始配對。";
+"The iPhone could not finish pairing. Please try again." = "iPhone 無法完成配對，請再試一次。";
+"Please try again." = "請再試一次。";
+
+/* Native session failures */
+"That location is outside the valid coordinate range." = "該位置超出有效座標範圍。";
+"WrapPin could not start its device session." = "WrapPin 無法啟動裝置工作階段。";
+"The location session stopped unexpectedly." = "定位工作階段意外停止。";
+"WrapPin could not identify this iPhone's pairing service." = "WrapPin 無法識別這部 iPhone 的配對服務。";
+"The saved pairing record could not be read." = "無法讀取已儲存的配對記錄。";
+"The saved pairing record is missing its device identity." = "已儲存的配對記錄缺少裝置標識。";
+"The discovered device did not match the paired iPhone." = "發現的裝置與已配對 iPhone 不匹配。";
+"The device tunnel returned an invalid device address." = "裝置隧道返回了無效的裝置地址。";
+"The device tunnel did not make the iPhone connection available in time." = "裝置隧道未能及時建立 iPhone 連接。";
+"WrapPin could not reach the iPhone through the device tunnel." = "WrapPin 無法通過裝置隧道連接 iPhone。";
+"The paired iPhone did not respond in time." = "已配對的 iPhone 未及時響應。";
+"The iPhone rejected the saved pairing session." = "iPhone 拒絕了已儲存的配對工作階段。";
+"Pairing verification took too long." = "配對驗證超時。";
+"The saved pairing is no longer valid. Reset Device Setup and pair again." = "已儲存的配對已失效。請重置裝置設定並重新配對。";
+"The iPhone did not create its secure tunnel in time." = "iPhone 未能及時創建安全隧道。";
+"The iPhone could not create its secure tunnel." = "iPhone 無法創建安全隧道。";
+"The device tunnel did not open the secure connection in time." = "裝置隧道未能及時開啟安全連接。";
+"WrapPin could not open the secure device tunnel." = "WrapPin 無法開啟安全裝置隧道。";
+"The encrypted device tunnel took too long to start." = "加密裝置隧道啟動超時。";
+"WrapPin could not secure the device tunnel." = "WrapPin 無法完成裝置隧道的安全設定。";
+"The iPhone returned an invalid tunnel address." = "iPhone 返回了無效的隧道地址。";
+"The iPhone returned an invalid service address." = "iPhone 返回了無效的服務地址。";
+"The iPhone's service directory took too long to respond." = "iPhone 服務目錄響應超時。";
+"WrapPin could not open the iPhone's service directory." = "WrapPin 無法開啟 iPhone 服務目錄。";
+"The iPhone's service handshake took too long." = "iPhone 服務握手超時。";
+"WrapPin could not complete the iPhone service handshake." = "WrapPin 無法完成 iPhone 服務握手。";
+"The location service took too long to open." = "定位服務開啟超時。";
+"The iPhone did not make its location service available." = "iPhone 未提供定位服務。";
+"The location service did not become ready in time." = "定位服務未能及時就緒。";
+"The iPhone's location service did not become ready." = "iPhone 定位服務未就緒。";
+"The location controls took too long to open." = "定位控制開啟超時。";
+"WrapPin could not open the iPhone's location controls." = "WrapPin 無法開啟 iPhone 定位控制。";
+"The iPhone did not accept the selected location." = "iPhone 未接受所選位置。";
+"The iPhone ended the active location session." = "iPhone 結束了當前定位工作階段。";
+"The iPhone could not start the location session." = "iPhone 無法啟動定位工作階段。";
+
+/* Onboarding */
+"ROAM CONTROL" = "WrapPin";
+"WrapPin" = "WrapPin";
+"Close introduction" = "關閉使用介紹";
+"Page %lld of %lld" = "第 %lld 頁，共 %lld 頁";
+"Set Up This iPhone" = "開始設定本機";
+"Welcome to WrapPin" = "歡迎使用 WrapPin";
+"Search for a place or tap the map, then start a fixed location or preview a walking route." = "搜尋地點或輕點地圖，即可模擬固定位置，也可以先預覽步行路線。";
+"Finish setup first" = "使用前先完成準備";
+"Complete these steps once before starting a simulated location." = "首次使用前完成以下三項準備。";
+"These steps are required before WrapPin can change this iPhone's reported location." = "完成以下準備後，WrapPin 才能修改本機報告的位置。";
+"These steps are required before WrapPin can change this iPhone’s reported location." = "完成以下準備後，WrapPin 才能修改本機報告的位置。";
+"Enable Developer Mode" = "開啟開發者模式";
+"Open Settings, then go to Privacy & Security > Developer Mode." = "開啟「設定」，前往「私隱與保安」>「開發者模式」。";
+"Install LocalDevVPN" = "安裝 LocalDevVPN";
+"Install and connect %@" = "安裝並連接 %@";
+"Keep its local tunnel connected while starting a location." = "開始模擬定位時，請保持本地隧道已連接。";
+"Connect its local tunnel before starting a location." = "開始模擬定位前，請先連接本地隧道。";
+"Pair this iPhone" = "配對本機";
+"The next screen will guide you through the private on-device pairing." = "下一頁會引導你完成僅限本機的私密配對。";
+"We'll guide you through pairing on the next screen." = "下一頁會引導你完成本機配對。";
+"Private by design" = "資料留在本機";
+"Choose whether to help improve WrapPin with anonymous activity counts. Sharing starts only if you switch it on and can be changed later in Settings." = "你可以選擇是否發送匿名使用統計。此功能預設關閉，之後也能隨時在「設定」中更改。";
+"Off by default. Never includes locations, searches, routes, pairing data or personal information." = "預設關閉，不會包含位置、搜尋、路線、配對資料或個人資訊。";
+
+/* Main interface and accessibility */
+"Opens device pairing setup" = "開啟裝置連接設定";
+"Favourites and history" = "收藏與歷史記錄";
+"Required before location control" = "開始模擬定位前需要完成";
+"Return map to north" = "將地圖轉回正北";
+"Show my current location" = "顯示我的真實位置";
+"N" = "北";
+"E" = "東";
+"S" = "南";
+"W" = "西";
+"Connection status: %@" = "連接狀態：%@";
+"Stop & Restore" = "停止模擬並恢復";
+"Keep Simulated Location" = "繼續保持模擬定位";
+"Stop the simulated location and restore your real location?" = "要停止模擬並恢復真實位置嗎？";
+"WrapPin will end the simulated location and restore this iPhone's real location." = "WrapPin 將停止模擬定位，並恢復本機的真實位置。";
+"This iPhone is using %@. Stop & Restore ends the simulation and restores its real location." = "本機當前模擬在 %@。停止後將恢復真實位置。";
+"Restoring this iPhone's real location. Keep WrapPin open until this finishes." = "正在恢復本機的真實位置，請保持 WrapPin 在前景。";
+"Restoring Real Location…" = "正在恢復真實位置…";
+"Location Simulation Stopped" = "模擬定位已停止";
+"Location simulation stopped. Waiting for a fresh location from this iPhone." = "模擬定位已停止，正在等待本機獲取新的真實位置。";
+"Waiting for a fresh location from this iPhone. Other apps may also take time to update…" = "正在等待本機獲取新的真實位置，其他 App 也可能需要一點時間更新…";
+
+/* Saved places */
+"Delete" = "刪除";
+"Rename" = "重命名";
+"Clear" = "清空";
+"Save" = "儲存";
+"Edit" = "編輯";
+"Favourites" = "收藏";
+"History" = "歷史記錄";
+"Saved Places" = "收藏與歷史";
+"Tap Edit to rearrange favourites." = "輕點「編輯」可調整收藏順序。";
+"Rename Favourite" = "重命名收藏";
+"Favourite name" = "收藏名稱";
+"Give this saved place a name that is easy to recognise." = "給這個地點起一個容易辨認的名稱。";
+"Reorder favourites" = "調整收藏順序";
+"Selects this location" = "選擇此位置";
+"Tap the heart on any selected place to save it." = "選擇地點後，輕點愛心即可收藏。";
+"Places you use will appear here." = "使用過的地點會顯示在這裏。";
+"Clear all favourites?" = "要清空全部收藏嗎？";
+"Clear location history?" = "要清空位置歷史記錄嗎？";
+"Clear saved places?" = "要清空儲存的地點嗎？";
+"Clear Favourites" = "清空收藏";
+"Clear History" = "清空歷史記錄";
+"Every favourite will be removed. Your history will be kept." = "所有收藏都會被刪除，歷史記錄會保留。";
+"Every recently used location will be removed. Your favourites will be kept." = "所有最近使用的位置都會被刪除，收藏會保留。";
+"This cannot be undone." = "此操作無法撤銷。";
+"Dismisses the keyboard" = "收起鍵盤";
+
+/* Walking routes */
+"Relaxed" = "慢速";
+"Normal" = "正常";
+"Brisk" = "快速";
+"Preview Walk" = "預覽步行";
+"Preview Drive" = "預覽駕駛";
+"Search for a place or tap the map, then start a fixed location or preview a walking or driving route." = "搜尋地點或輕點地圖，即可模擬固定位置，也可以先預覽步行或駕駛路線。";
+"Fixed, walking or driving session started" = "開始固定位置、步行或駕駛模擬";
+"Ask Apple Maps for road routes before starting a simulated drive. When there are several, choose one on the card or tap it on the map." = "開始前先通過 Apple 地圖規劃駕駛路線。有多條路線時，可在卡片上選擇，或直接輕點地圖上的路線。";
+"Route %lld, %@, %@" = "路線 %1$lld，%2$@，%3$@";
+"Set a constant speed from 5 to 240 km/h. Travel time uses this speed, not live traffic." = "可設定 5–240 公里／小時的勻速模擬速度。預計用時按所選速度計算，不代表實時路況。";
+"End the route and confirm that this iPhone's real location has returned." = "結束路線模擬後，確認本機真實位置已恢復。";
+"Start a fixed location or preview a walking or driving route." = "開始固定位置模擬，或先預覽步行、駕駛路線。";
+"Driving route" = "駕駛路線";
+"Driving routes" = "駕駛路線";
+"Simulated route location" = "模擬路線位置";
+"Follow simulated car" = "跟隨模擬車輛";
+"Show whole route" = "查看整條路線";
+"Simulated speed" = "模擬速度";
+"Simulated driving speed" = "模擬駕駛速度";
+"Constant route speed · 5–240 km/h" = "勻速沿路線移動 · 5–240 公里／小時";
+"%lld km/h" = "%lld 公里／小時";
+"Travel time" = "預計用時";
+"Paused" = "已暫停";
+"Start Driving" = "開始模擬駕駛";
+"Starting driving session…" = "正在啟動模擬駕駛…";
+"Preparing drive" = "正在準備駕駛路線";
+"Driving" = "駕駛中";
+"Drive paused" = "駕駛已暫停";
+"Ending route" = "正在結束路線模擬";
+"Route unavailable" = "路線模擬不可用";
+"Stop route and restore real location" = "停止路線模擬並恢復真實位置";
+"Stop the route and restore this iPhone's real location?" = "要停止路線模擬並恢復本機真實位置嗎？";
+"WrapPin will end the simulated route and restore your real location. Your route progress will be reset." = "WrapPin 將結束路線模擬並恢復真實位置，當前進度會被清除。";
+"Pair this iPhone before starting a route session." = "開始路線模擬前，請先配對本機。";
+"The active location session ended before the route finished." = "路線模擬尚未結束，定位連接已中斷。";
+"Your simulated location will stay here until you resume the route." = "暫停期間模擬位置會停在這裏，繼續後再沿路線移動。";
+"Keep WrapPin running. You can use other apps while the route continues." = "請保持 WrapPin 執行；路線模擬期間可以切換到其他 App。";
+"This route does not contain enough detail to simulate movement." = "這條路線的細節不足，無法模擬移動。";
+"No driving route was found for this destination." = "沒有找到前往該地點的駕駛路線。";
+"Driving directions are unavailable. Check Location access and your internet connection, then try again." = "暫時無法規劃駕駛路線。請檢查定位權限和網絡後再試一次。";
+"The remaining route could not be prepared." = "無法恢復剩餘路線，請重新規劃。";
+"WrapPin could not start the route session." = "無法啟動路線模擬，請再試一次。";
+"WrapPin could not follow this route." = "無法繼續沿當前路線模擬移動。";
+"WrapPin will reconnect only long enough to clear the simulated location. It will not start a new route session." = "WrapPin 只會短暫重連並清除模擬位置，不會啟動新的路線任務。";
+"WrapPin closed before it could confirm that the simulated drive to %@ ended. Continue from the last saved point or restore this iPhone's real location." = "WrapPin 關閉前未能確認前往 %@ 的模擬駕駛已結束。可從上次儲存的位置繼續，或恢復本機真實位置。";
+"Resume Driving" = "繼續模擬駕駛";
+"Walking to %@" = "步行前往 %@";
+"Driving to %@" = "駕駛前往 %@";
+"%lld%% complete" = "已完成 %lld%%";
+"Walking pace" = "步行速度";
+"Custom walking speed" = "自訂步行速度";
+"Walking speed" = "步行時速";
+"Constant route speed · 1–12 km/h" = "勻速沿路線移動 · 1–12 公里／小時";
+"%.1f km/h" = "%.1f 公里／小時";
+"Remaining" = "剩餘";
+"Distance" = "距離";
+"Status" = "狀態";
+"Walking" = "步行中";
+"Arrive" = "預計到達";
+"Start Walking" = "開始模擬步行";
+"Starting walking session…" = "正在啟動模擬步行…";
+"Resume" = "繼續";
+"Pause" = "暫停";
+"Walk Route Back" = "沿原路線返回";
+"New Location" = "選擇新位置";
+"Walking route" = "步行路線";
+"Preparing walk" = "正在準備步行路線";
+"Walk paused" = "步行已暫停";
+"Arrived" = "已到達";
+"Ending walk" = "正在結束步行";
+"Walking unavailable" = "步行模擬不可用";
+"Current Location to %@" = "從當前位置前往 %@";
+"Heading to %@ · %lld%%" = "正在前往 %@ · %lld%%";
+"Location active at %@" = "當前模擬位置：%@";
+"Restoring this iPhone's real location" = "正在恢復本機真實位置";
+"Complete" = "已完成";
+"Now" = "現在";
+"%lld min" = "%lld 分鐘";
+"%lld hr" = "%lld 小時";
+"%lld hr %lld min" = "%lld 小時 %lld 分鐘";
+"Route Start" = "路線起點";
+"Starting point for %@" = "前往 %@ 的起點";
+"Your location will move along this route at the selected pace." = "模擬位置會按所選速度沿路線移動。";
+"Pair this iPhone before starting a walking session." = "開始模擬步行前，請先配對本機。";
+"Follow the mobile-data guidance if it appears." = "如果出現流動網絡提示，請按頁面説明操作。";
+"Keep WrapPin running. You can use other apps while the walk continues." = "請保持 WrapPin 執行；步行模擬期間可以切換到其他 App。";
+"Your spoofed location is being held here until you resume." = "模擬位置會停留在當前地點，直到你繼續步行。";
+"The destination remains active until you stop and restore your real location." = "到達後仍會保持模擬位置，直到你停止並恢復真實位置。";
+"Keep WrapPin open until the real location has been restored." = "請保持 WrapPin 在前景，直到真實位置恢復。";
+"Close walking route" = "關閉步行路線";
+"Stop walking and restore real location" = "停止步行並恢復真實位置";
+"Stop and restore real location" = "停止模擬並恢復真實位置";
+"Stop walking and restore this iPhone's real location?" = "要停止模擬步行並恢復本機真實位置嗎？";
+"WrapPin will end the simulated walk and restore your real location. Your route progress will be reset." = "WrapPin 將結束模擬步行並恢復真實位置，當前路線進度會被清除。";
+"This walking route does not contain enough detail to simulate movement." = "這條步行路線的細節不足，無法模擬移動。";
+"No walking route was found for this destination." = "沒有找到前往該地點的步行路線。";
+"The remaining walking route could not be prepared." = "無法恢復剩餘的步行路線，請重新規劃。";
+"Walking directions are unavailable. Check Location access and your internet connection, then try again." = "暫時無法規劃步行路線。請檢查定位權限和網絡後再試一次。";
+"WrapPin could not start the walking session." = "無法啟動模擬步行，請再試一次。";
+"WrapPin could not follow this walking route." = "無法繼續沿當前路線模擬步行。";
+"The active location session ended before the walk finished." = "模擬步行尚未結束，定位連接已中斷。";
+
+/* Interrupted-session recovery */
+"Previous Session Interrupted" = "上次模擬定位意外中斷";
+"Restore this iPhone's real location?" = "要恢復本機的真實位置嗎？";
+"Restore Real Location" = "恢復真實位置";
+"Keep Recovery Options" = "暫不處理";
+"WrapPin will reconnect only long enough to clear the simulated location. It will not start a new location or walking session." = "WrapPin 只會短暫重連並清除模擬位置，不會啟動新的定位或步行任務。";
+"Last saved point" = "上次儲存的位置";
+"Last location" = "上次模擬位置";
+"Destination" = "目的地";
+"Last active" = "上次執行時間";
+"Restoring this iPhone's real location…" = "正在恢復本機真實位置…";
+"Preparing the route…" = "正在準備路線…";
+"Cancel Restoration" = "取消恢復";
+"My Real Location Is Already Back" = "真實位置已經恢復";
+"Pair this iPhone before resuming or restoring the session." = "繼續或恢復真實位置前，請先配對本機。";
+"Restoring reconnects only long enough to clear the simulated location. Nothing starts automatically. Keep WrapPin open until it finishes." = "恢復操作只會短暫重連並清除模擬位置。請保持 WrapPin 在前景，等待操作完成。";
+"WrapPin closed before it could confirm that the simulated walk to %@ ended. Continue from the last saved point or restore this iPhone's real location." = "WrapPin 上次關閉時，未能確認前往 %@ 的模擬步行已經結束。你可以從上次儲存的位置繼續，也可以恢復本機真實位置。";
+"WrapPin closed before it could confirm that the simulated location at %@ ended. Choose what this iPhone should do next." = "WrapPin 上次關閉時，未能確認 %@ 的模擬定位已經結束。請選擇繼續模擬或恢復本機真實位置。";
+"Resume Walking" = "繼續模擬步行";
+"Resume Location" = "繼續模擬定位";
+"Pair this iPhone before restoring its real location." = "恢復真實位置前，請先配對本機。";
+"The saved pairing record is unavailable. Pair this iPhone again." = "已儲存的配對記錄不可用，請重新配對本機。";
+"WrapPin will need a new RPPairing file before it can connect again." = "再次連接前，需要為 WrapPin 生成新的 RPPairing 配對檔案。";
+
+/* Connection help */
+"WrapPin has not found LocalDevVPN's device connection yet." = "尚未發現 LocalDevVPN 的本機連接。";
+"WrapPin should continue automatically. If it doesn't, tap Continue." = "連接恢復後會自動繼續；如果沒有反應，請輕點「繼續」。";
+
+/* Settings, updates and feedback */
+"Updates" = "版本更新";
+"Check for Updates" = "檢查更新";
+"Checking for Updates…" = "正在檢查更新…";
+"A newer public release is available: %@." = "發現新版本：%@。";
+"You have the latest public release (%@)." = "當前已是最新公開版本（%@）。";
+"View public release %@" = "查看公開版本 %@";
+"You are using a newer local test build (%@ Build %@)." = "當前使用的是較新的本地測試版本（%@，構建 %@）。";
+"No public GitHub release has been published yet." = "GitHub 上暫時沒有公開發布版本。";
+"Couldn’t check GitHub right now. Try again later." = "暫時無法連接 GitHub，請稍後再試一次。";
+"Feedback" = "反饋";
+"Community" = "社區";
+"View & Star on GitHub" = "在 GitHub 查看並 Star";
+"Report a Bug" = "反饋問題";
+"Request a Feature" = "功能建議";
+"Follow Me" = "關注我";
+"Star the repository if WrapPin helps you, or suggest an improvement. For pairing or connection problems, open Connection Health and use Copy Diagnostics. Never include pairing records, credentials or private locations." = "如果 WrapPin 對你有幫助，歡迎為倉庫點個 Star，或提交改進建議。反饋配對或連接問題前，請先在「連接檢測」中複製診斷資訊；切勿提交配對記錄、帳戶憑證或私人位置。";
+"GitHub may ask you to choose Bug Report or Feature Request first. For pairing or connection problems, open Connection Health and use Copy Diagnostics. Do not include pairing records, credentials or private locations." = "反饋連接問題時，請先在「連接檢測」中複製診斷資訊。不要提交配對記錄、帳戶憑證或私人位置。";
+
+/* Connection diagnostics */
+"Importing" = "正在匯入";
+"LocalDevVPN" = "LocalDevVPN";
+"Restoration" = "真實位置恢復";
+"Other VPNs" = "其他 VPN";
+"Help" = "幫助";
+"Support" = "獲取幫助";
+"An inactive session means WrapPin's worker has ended. Other apps may need time to acquire a fresh real location." = "定位任務已結束，但其他 App 可能需要一些時間才能重新獲取真實位置。";
+"This checks the saved pairing record and whether the paired iPhone is visible through LocalDevVPN. It never starts, changes, or stops your location." = "此檢查只驗證配對記錄和 LocalDevVPN 連接，不會啟動、修改或停止模擬定位。";
+"Copies a status-only report you can paste into a bug report. It never includes locations, searches, pairing records, PINs, device names or error text." = "複製一份僅包含連接狀態的診斷報告，不含位置、搜尋、配對記錄、PIN、裝置名稱或錯誤原文。";
+"Another VPN may affect local device connections. If it is appropriate for your network, compare a test with that VPN paused. Keep LocalDevVPN enabled when starting a location session." = "其他 VPN 可能影響本機連接。排障時可以暫時停用其他 VPN，但啟動模擬定位時必須保持 LocalDevVPN 已連接。";
+"WrapPin has not detected another VPN. This is a troubleshooting check, not a diagnosis; an iOS scheduler rejection happens before the pairing connection starts." = "未檢測到其他 VPN。此結果僅用於排障；如果 iOS 在配對連接開始前拒絕任務，原因與 VPN 無關。";
+"Not requested" = "尚未請求";
+"Stop requested; awaiting device response" = "已請求停止，正在等待本機響應";
+"Stop not confirmed; real location unverified" = "未確認停止，真實位置尚未驗證";
+"Stop command acknowledged; real location reacquisition unverified" = "已確認停止，正在等待重新獲取真實位置";
+"Background Session" = "背景保持";
+"Waiting for permission" = "等待定位授權";
+"Starting" = "正在啟動";
+"Location permission denied" = "定位權限已關閉";
+"Location access restricted" = "定位權限受限";
+"Location Services off" = "系統定位服務已關閉";
+"Background mode missing" = "缺少背景定位設定";
+"Temporarily unavailable" = "暫時無法獲取更新";
+"The current simulation can still work in the foreground, but background continuity is unavailable. Check Location access for WrapPin in Settings." = "當前模擬定位仍可在前景執行，但無法保證切換到其他 App 後持續。請到系統設定檢查 WrapPin 的定位權限。";
+"WrapPin has not detected another VPN. This is a troubleshooting check, not a diagnosis." = "未檢測到其他 VPN。此結果僅用於排障，不代表已經確定問題原因。";
+"Tunnel App" = "隧道跳轉應用";
+"Selects the app to open when WrapPin cannot reach the paired iPhone." = "選擇裝置連接不可用時要開啟的應用。";
+"If the paired iPhone is unreachable, WrapPin opens this app on Wi-Fi or mobile data. Turn on its tunnel yourself, then return to WrapPin. This only selects the app to open; it does not ensure that app's tunnel supports device pairing." = "Wi-Fi 或流動網絡下，若無法連接已配對的 iPhone，就開啟所選應用。請自行開啟隧道後返回 WrapPin。這裏只決定跳轉目標，不保證所選隧道支援裝置配對連接。";
+"If the paired iPhone is unreachable, WrapPin asks LocalDevVPN to connect and return. If it does not return automatically, check its tunnel and come back to WrapPin." = "若無法連接已配對的 iPhone，WrapPin 會請求 LocalDevVPN 建立隧道並返回。若沒有自動返回，請檢查隧道狀態，再手動回到 WrapPin。";
+"On Wi-Fi, WrapPin opens LocalDevVPN if the paired iPhone is unreachable. On mobile data, it uses LocalDevVPN's connect-and-return flow before continuing. If it does not return automatically, check its tunnel and come back to WrapPin." = "使用 Wi-Fi 時，若無法連接已配對的 iPhone，WrapPin 會開啟 LocalDevVPN；使用流動網絡時，會先走 LocalDevVPN 建立隧道並返回的流程。若沒有自動返回，請檢查隧道後手動回到 WrapPin。";
+"WrapPin asks Shadowrocket to connect its VPN only when it cannot find the paired iPhone's device connection. Shadowrocket requires Include Route 10.7.0.1/32 turned on in its Settings. If mobile data fails, use Wi-Fi. WrapPin cannot inspect Shadowrocket's VPN switch." = "僅在找不到已配對 iPhone 的裝置連接時，WrapPin 才會請求 Shadowrocket 開啟 VPN。Shadowrocket 需要在「設定 → 其它」中開啟「包含路由 10.7.0.1/32」；流動網絡失敗時請改用 Wi-Fi。WrapPin 無法讀取 Shadowrocket 的 VPN 開關狀態。";
+"WrapPin asks Surge to start its selected configuration only when it cannot find the paired iPhone's device connection. Surge 5.23+ requires 10.7.0.1/32 in tun-included-routes and 10.7.0.1 = reflect in IP Rewrite. If mobile data fails, use Wi-Fi. WrapPin cannot inspect Surge's VPN switch." = "僅在找不到已配對 iPhone 的裝置連接時，WrapPin 才會請求 Surge 啟動當前設定。Surge 5.23+ 需要在 tun-included-routes 中加入 10.7.0.1/32，並在 IP Rewrite 中設定 10.7.0.1 = reflect；流動網絡失敗時請改用 Wi-Fi。WrapPin 無法讀取 Surge 的 VPN 開關狀態。";
+"WrapPin asks Loon to turn on its VPN only when it cannot find the paired iPhone's device connection. Loon build 1007+ requires include-tun = 10.7.0.1/32 and an enabled plugin with 10.7.0.1 = reflect in IP Rewrite. If mobile data fails, use Wi-Fi. WrapPin cannot inspect Loon's VPN switch." = "僅在找不到已配對 iPhone 的裝置連接時，WrapPin 才會請求 Loon 開啟 VPN。Loon Build 1007+ 需要設定 include-tun = 10.7.0.1/32，並啓用在 IP Rewrite 中聲明 10.7.0.1 = reflect 的插件；流動網絡失敗時請改用 Wi-Fi。WrapPin 無法讀取 Loon 的 VPN 開關狀態。";
+"Opening tunnel app" = "正在開啟隧道應用";
+"Opening %@…" = "正在開啟 %@…";
+"WrapPin asks %@ to turn on its VPN only when it cannot find the paired iPhone's device connection. Its configuration must send connections to 10.7.0.1 back to this iPhone; check the result in Connection Health. If mobile data fails, use Wi-Fi. WrapPin cannot inspect its VPN switch." = "僅在找不到已配對 iPhone 的裝置連接時，WrapPin 才會請求 %@ 開啟 VPN。它的設定需要把發往 10.7.0.1 的連接回送到本機，可在「連接檢測」中查看結果；流動網絡失敗時請改用 Wi-Fi。WrapPin 無法讀取它的 VPN 開關狀態。";
+"WrapPin opens Quantumult X when it cannot find the paired iPhone's device connection. Quantumult X has no link that turns on its VPN, so turn it on yourself and return to WrapPin. Its configuration must send connections to 10.7.0.1 back to this iPhone; check the result in Connection Health. If mobile data fails, use Wi-Fi." = "找不到已配對 iPhone 的裝置連接時，WrapPin 會開啟 Quantumult X。Quantumult X 沒有開啟 VPN 的鏈接，請手動開啟後返回 WrapPin。它的設定需要把發往 10.7.0.1 的連接回送到本機，可在「連接檢測」中查看結果；流動網絡失敗時請改用 Wi-Fi。";
+"WrapPin opens sing-box when it cannot find the paired iPhone's device connection. sing-box has no link that turns on its VPN, so turn it on yourself and return to WrapPin. sing-box 1.12+ requires loopback_address set to 10.7.0.1 in its TUN inbound. If mobile data fails, use Wi-Fi." = "找不到已配對 iPhone 的裝置連接時，WrapPin 會開啟 sing-box。sing-box 沒有開啟 VPN 的鏈接，請手動開啟後返回 WrapPin。sing-box 1.12+ 需要在 TUN 入站中把 loopback_address 設為 10.7.0.1；流動網絡失敗時請改用 Wi-Fi。";
+"Turn on the tunnel in the selected app, then return to WrapPin." = "請在所選應用中手動開啟隧道，然後返回 WrapPin。";
+"Wait for LocalDevVPN to connect and return. If it does not, return to WrapPin yourself." = "等待 LocalDevVPN 建立隧道並返回；若沒有自動返回，請手動回到 WrapPin。";
+"Could not open the selected tunnel app. Check that it is installed and supports app links." = "無法開啟所選隧道應用。請確認它已安裝，並支援應用跳轉鏈接。";
+"Get %@" = "安裝 %@";
+"Open %@" = "開啟 %@";
+"WrapPin has not found the paired iPhone's device connection yet." = "WrapPin 還沒有找到這台已配對 iPhone 的裝置連接。";
+"Make sure the selected app's tunnel is connected, then try again. Choose mobile data only when you're actually using 4G or 5G." = "請確認所選應用的隧道已連接，然後再試一次。只有確實在使用 4G/5G 時才選擇流動網絡流程。";
+"Use Wi-Fi with %@" = "請連接 Wi-Fi 後使用 %@ 再試一次";
+"%@ may not provide the device connection WrapPin needs over mobile data. Connect to Wi-Fi, keep a compatible tunnel on, then return and try again." = "流動網絡下，%@ 可能無法建立 WrapPin 所需的裝置連接。請連接 Wi-Fi，保持兼容隧道開啟，再返回再試一次。";
+"Make sure the selected app's tunnel is connected, switch mobile data off briefly, then return to WrapPin." = "確認所選應用的隧道已連接，暫時關閉流動數據，然後返回 WrapPin。";
+"Device Tunnel" = "裝置隧道";
+"Check the selected tunnel app, then run the connection check or try starting the location again." = "請檢查所選隧道應用，再執行連接檢測或重新啟動模擬定位。";
+"This checks the saved pairing record and whether the paired iPhone is reachable through a compatible device tunnel. It cannot inspect another app's VPN switch or change your location." = "這裏檢查儲存的配對記錄及能否通過兼容的裝置隧道連接本機，無法讀取其他應用的 VPN 開關，也不會更改位置。";
+"Another VPN may affect local device connections. Keep a compatible device tunnel enabled when starting a location session; a regular proxy alone may not work." = "其他 VPN 可能影響本機連接。啟動定位工作階段時需要兼容的裝置隧道，僅有普通代理可能無法使用。";
+"%@ on mobile data may not expose the device connection WrapPin needs. Use Wi-Fi if the connection check fails." = "流動網絡下，%@ 可能無法提供 WrapPin 所需的裝置連接。若檢測失敗，請改用 Wi-Fi。";
+"Device tunnel reachability can only be checked on a physical iPhone." = "只能在實體 iPhone 上檢測裝置隧道連通性。";
+"The paired iPhone was announced, but its tunnel address was not reachable. Reconnect the selected tunnel and check its device and tunnel IP settings." = "已發現配對的 iPhone，但隧道地址無法連接。請重連所選隧道，並檢查裝置 IP 和隧道 IP 設定。";
+"A device announcement is visible, but it does not match the paired iPhone. Restart the selected tunnel and try again." = "已發現裝置廣播，但與配對的 iPhone 不匹配。請重啓所選隧道後再試一次。";
+"This iPhone was not reachable through the device tunnel. Check that a compatible tunnel is connected. On mobile data, switch data off briefly and run the check again." = "無法通過裝置隧道連接這部 iPhone。請確認兼容隧道已連接；若使用流動網絡，請暫時關閉流動數據後再次檢測。";
+"This iPhone was not reachable through the device tunnel. If you are using an external tunnel app on mobile data, connect to Wi-Fi and run the check again." = "無法通過裝置隧道連接這部 iPhone。如果正通過流動網絡使用外部隧道應用，請連接 Wi-Fi 後重新檢測。";
+"The pairing record matches this iPhone and it is reachable through the device tunnel. The iPhone verifies the pairing itself when a location session starts." = "配對記錄與這部 iPhone 匹配，且可通過裝置隧道連接。配對本身會在開始定位時由 iPhone 校驗。";
+
+/* Status and map errors */
+"Dropped Pin" = "地圖選點";
+"Selected from the map" = "從地圖選擇";
+"Entered Location" = "座標位置";
+"Entered using coordinates" = "通過經緯度輸入";
+"Finding nearby address…" = "正在查找附近地址…";
+"Address unavailable · %@" = "未找到詳細地址 · %@";
+"Copy coordinates" = "複製座標";
+"Coordinates copied" = "已複製座標";
+"Not configured" = "尚未設定";
+"Pairing support has not been added yet." = "請先完成本機配對。";
+"The paired device is available." = "本機已配對，可以開始模擬定位。";
+"WrapPin is preparing the secure device session." = "正在準備安全連接。";
+"WrapPin is controlling the session." = "模擬定位正在執行。";
+"Enter latitude from −90 to 90 and longitude from −180 to 180." = "緯度請輸入 −90 到 90，經度請輸入 −180 到 180。";
+"No matching place found. You can also paste coordinates, such as 35.6586, 139.7454." = "沒有找到匹配的地點。也可以直接貼上座標，例如 35.6586, 139.7454。";
+"Search is unavailable right now." = "暫時無法搜尋地點，請稍後再試一次。";
+"Location details unavailable" = "暫無地點詳細資料";
+"Allow Location access in Settings to show your real position." = "請在系統設定中允許定位權限，以顯示真實位置。";
+"Your real location is not available yet." = "暫時無法獲取真實位置，請稍後再試一次。";
+
+/* About and in-app guide */
+"Choose, test and move this iPhone’s reported location from one clean map." = "在一張地圖上選擇、測試和移動本機報告的位置。";
+"How it works" = "快速開始";
+"WrapPin is intended for location-based app development and testing on your own device." = "WrapPin 用於在你擁有並控制的裝置上進行定位開發和測試。";
+"Pair this iPhone once." = "完成一次本機配對。";
+"Connect %@." = "連接 %@。";
+"Search, choose or drop a location." = "搜尋地點，或直接在地圖上選點。";
+"Start a fixed location or preview a walking route." = "開始固定位置模擬，或先預覽步行路線。";
+"Search" = "搜尋";
+"Find a place by name or enter latitude and longitude. Choosing a result also clears the search ready for the next one." = "按名稱搜尋地點，或直接輸入經緯度。選擇結果後，搜尋框會自動清空。";
+"Tap the map" = "輕點地圖";
+"Drop a precise pin anywhere on the map. The close button on its card clears that pin." = "輕點地圖即可放置精確位置點，地點卡片上的關閉按鈕可以清除該位置。";
+"Favourite" = "收藏";
+"Save the selected place for quick use later. Favourites can be renamed, reordered or removed from the saved-locations screen." = "收藏常用地點，之後可以重命名、調整順序或刪除。";
+"Favourites & history" = "收藏與歷史";
+"Open saved favourites and recently used locations. Swipe an item to remove it." = "查看收藏和最近使用的位置，左滑可刪除。";
+"Map controls" = "地圖操作";
+"Current location" = "真實位置";
+"Fly back to this iPhone’s real location and return the map to north-up." = "回到本機真實位置，並將地圖轉回正北。";
+"Compass" = "指南針";
+"Appears when the map is rotated. It shows the map heading; tap it to face north again." = "旋轉地圖後會顯示指南針，輕點即可恢復正北方向。";
+"Connection status" = "連接狀態";
+"Shows whether WrapPin is ready, connecting or active. Tap it for pairing and connection details." = "顯示本機是否已就緒、正在連接或模擬定位中。輕點可查看裝置連接詳細資料。";
+"Change appearance and map style, check the connection, manage pairing and view app information." = "調整外觀和地圖樣式，檢查連接、管理配對並查看 App 資訊。";
+"Location control" = "模擬定位";
+"Start reporting the selected place as this iPhone’s location. %@ must be connected." = "將所選地點設為本機報告的位置。開始前必須連接 %@。";
+"Move an active location session to a newly selected place without restarting the whole connection flow." = "模擬定位執行時，可以直接切換到新地點，無需重新連接。";
+"Confirm before ending the active session and restoring this iPhone’s real location." = "結束模擬定位並恢復本機真實位置前會再次確認。";
+"Mobile-data guidance" = "流動網絡引導";
+"When using mobile data, temporarily turn it off when asked. WrapPin continues automatically once the local connection is available, and tells you when data can go back on." = "使用流動網絡時，請按提示暫時關閉流動數據。建立本機連接後會自動繼續，並提示何時可以重新開啟。";
+"Interrupted-session recovery" = "中斷恢復";
+"If WrapPin did not receive a normal end signal, the next launch offers to resume, reconnect briefly to restore the real location, or confirm that it is already back." = "如果上次沒有正常結束，再次開啟時可以繼續任務、短暫重連以恢復真實位置，或確認真實位置已經恢復。";
+"Walking routes" = "步行路線";
+"Ask Apple Maps for walking routes from your current point to the selected destination before anything starts. When there are several, choose one on the card or tap it on the map." = "開始前，先通過 Apple 地圖規劃從當前位置到目的地的步行路線。有多條路線時，可在卡片上選擇，或直接輕點地圖上的路線。";
+"Choose how quickly the simulated location moves along the route." = "選擇模擬位置沿路線移動的速度。";
+"Begin moving the reported location along the previewed route. The walk can continue while you use another app." = "讓模擬位置沿預覽路線移動；切換到其他 App 後仍可繼續。";
+"Pause or Resume" = "暫停或繼續";
+"Hold the current point on the route, then continue from exactly where it paused." = "將模擬位置停在當前路線點，之後可以從這裏繼續。";
+"After arrival, reverse the journey and walk back along the route." = "到達後沿原路線反向返回。";
+"Keep the active session and return to the map so you can choose another destination." = "保持當前連接並返回地圖，選擇新的目的地。";
+"Stop walking, clear the route and restore the real location. A confirmation helps prevent accidental stops." = "停止模擬步行、清除路線並恢復真實位置。操作前會再次確認。";
+"Setup & support" = "設定與幫助";
+"Pair this iPhone once so WrapPin can identify it through %@." = "只需配對一次，之後 WrapPin 即可通過 %@ 識別本機。";
+"Check pairing and the local connection without changing your location. You can also share a readable diagnostics report." = "檢查配對和本機連接，不會修改當前位置。也可以複製便於閲讀的診斷報告。";
+"View onboarding again without deleting your pairing, favourites, history or preferences." = "重新查看使用介紹，不會刪除配對、收藏、歷史記錄或偏好設定。";
+"Erase the pairing record and all saved app choices, then return to onboarding. LocalDevVPN itself is not changed." = "刪除配對記錄和所有本地設定，然後返回首次使用頁面；不會更改 LocalDevVPN。";
+
+/* Anonymous usage statistics */
+"Anonymous Statistics" = "匿名使用統計";
+"Shared" = "會發送";
+"Never Shared" = "絕不發送";
+"Storage and Control" = "儲存與控制";
+"WrapPin sends only a small, fixed set of anonymous activity counts when sharing is enabled." = "開啟後，WrapPin 只發送少量固定的匿名使用計數。";
+"Hashed random installation identifier" = "經過哈希處理的隨機安裝標識";
+"Approximate event time" = "大致事件時間";
+"App opened or returned to foreground" = "App 開啟或回到前景";
+"App version and build" = "App 版本與組建編號";
+"Introduction completed" = "完成首次使用介紹";
+"Connection help, retry and retry success counts" = "連接幫助、再試一次及再試一次成功次數";
+"Fixed failure stage, scheduler reason, operation and recovery category" = "固定的失敗階段、調度原因、操作和恢復類別";
+"Pairing completed" = "完成配對";
+"Fixed or walking session started" = "開始固定位置或步行模擬";
+"Active location updated" = "更新正在模擬的位置";
+"Locations or coordinates" = "位置或座標";
+"Searches, favourites or history" = "搜尋、收藏或歷史記錄";
+"Walking routes or destinations" = "步行路線或目的地";
+"Pairing records, PINs or device names" = "配對記錄、PIN 或裝置名稱";
+"Diagnostics or raw error messages" = "診斷資訊或錯誤原文";
+"Apple ID or personal details" = "Apple ID 或個人資訊";
+"A random identifier is created for this installation and irreversibly hashed before it is sent. It is used only to estimate activity from participating installations." = "本次安裝會生成一個隨機標識，發送前會進行不可逆哈希處理，僅用於估算參與統計的安裝數量。";
+"Turning sharing off immediately stops new reporting and removes the identifier from WrapPin. It cannot withdraw anonymous events already received by TelemetryDeck." = "關閉後會立即停止發送新資料，並刪除本機標識；TelemetryDeck 已收到的匿名事件無法撤回。";
+"TelemetryDeck says it does not store IP addresses. Anonymous events may be retained for roughly 7–10 years, with no guaranteed exact deletion date." = "TelemetryDeck 表示不會儲存 IP 地址。匿名事件可能保留約 7 至 10 年，無法保證準確刪除日期。";
+"WrapPin uses a narrow first-party sender instead of an analytics SDK, so extra device metadata cannot be added automatically." = "WrapPin 沒有集成分析 SDK，而是使用受限的內置發送模組，避免自動附帶額外裝置資訊。";
+
+/* Native bridge errors */
+"WrapPin could not start its pairing engine." = "WrapPin 無法啟動本機配對引擎。";
+"WrapPin could not open a local pairing connection." = "WrapPin 無法建立本機配對連接。";
+"WrapPin could not determine its pairing port." = "WrapPin 無法確定配對端口。";
+"The iPhone could not connect to WrapPin." = "iPhone 無法連接 WrapPin。";
+"WrapPin could not confirm stopping location simulation." = "WrapPin 無法確認停止模擬定位。";
+"The iPhone did not confirm stopping location simulation in time." = "iPhone 未能及時確認停止模擬定位。";
+"Simulation coordinate mode" = "模擬座標方式";
+"GCJ-02 correction" = "GCJ-02 校正";
+"WGS84 unchanged" = "WGS84 原樣";
+"Expand location details" = "展開位置詳細資料";
+"Collapse location details" = "收起位置詳細資料";
+"For mainland China, try GCJ-02 first. If the position is off, switch to WGS84." = "中國大陸可先試 GCJ-02；位置有偏差就切換 WGS84。";
+"Outside mainland China, try WGS84 first. If the position is off, switch to GCJ-02." = "中國大陸以外可先試 WGS84；位置有偏差就切換 GCJ-02。";
+"WrapPin %@ is available." = "WrapPin %@ 已發佈。";
+"View release and download" = "查看版本並下載";
+"Dismiss update reminder" = "關閉更新提醒";
+"Close route preview" = "關閉路線預覽";
+"View release %@" = "查看版本 %@";
+"WrapPin checks the latest public GitHub release when it opens. You can check again here. Location, pairing and diagnostic data are not sent with this request." = "WrapPin 啟動時會檢查 GitHub 上最新的正式版，也可在此手動重查。請求不會發送位置、配對或診斷資料。";
+"地图选点" = "地圖選點";
+"模拟目标" = "模擬目標";
+"定位回调" = "定位回調";
+"数值距离" = "數值距離";
+"水平精度" = "水平精度";
+"回调时间" = "回調時間";
+"软件模拟标记" = "軟件模擬標記";
+"定位精度调研" = "定位精度調研";
+"正在获取新的定位回调，最多等待 15 秒…" = "正在獲取新的定位回調，最多等待 15 秒…";
+"使用独立定位读取器获取新的 Core Location 回调，关闭页面即清除。数值距离不能单独证明 Apple 地图蓝点的显示坐标。" = "使用獨立定位讀取器獲取新的 Core Location 回調，關閉頁面即清除。數值距離不能單獨證明 Apple 地圖藍點的顯示座標。";
+"Switching modes updates the current simulated location immediately." = "切換後會立即更新當前模擬位置。";
+"Use Built-in Tunnel" = "使用內置隧道";
+"Built-in Tunnel" = "內置隧道";
+"Disconnected" = "未連接";
+"Start Built-in Tunnel" = "開啟內置隧道";
+"Stop Built-in Tunnel" = "關閉內置隧道";
+"After allowing its VPN configuration once, WrapPin starts this local device tunnel for location sessions and stops it after a successful restore. A tunnel you start here stays on until you stop it. A compatible signing profile is required." = "首次允許添加 VPN 設定後，WrapPin 會在模擬定位時開啟本機隧道，成功恢復真實位置後關閉。在這裏手動開啟的隧道會一直保持，直到你手動關閉。簽名設定需要支援網絡擴展。";
+"Built-in tunnel did not connect in time." = "內置隧道未能及時連接。";
+"WrapPin could not start its built-in tunnel." = "WrapPin 無法啟動內置隧道。";
+"Starting built-in tunnel…" = "正在啟動內置隧道…";
+"WrapPin is connecting its built-in device tunnel." = "WrapPin 正在連接內置裝置隧道。";
+"Check that WrapPin's built-in tunnel is connected, then try again. If you are using mobile data, follow the mobile data steps below." = "確認 WrapPin 的內置隧道已連接後再試一次。如果正在使用流動數據，請按下方步驟操作。";
+"Keep the built-in tunnel connected, switch mobile data off briefly, then return to WrapPin." = "保持內置隧道連接，暫時關閉流動數據，然後返回 WrapPin。";
+"WrapPin uses its built-in device tunnel. If another VPN is active, stop it before testing this tunnel." = "WrapPin 正在使用內置裝置隧道。測試前請先關閉其他 VPN。";
+"Built-in VPN" = "內置 VPN";
+"Disconnecting" = "斷開中";
+"Allow WrapPin's built-in VPN" = "允許 WrapPin 添加內置 VPN";
+"The first location session asks to add a VPN configuration; WrapPin then starts its local device tunnel automatically." = "首次模擬定位時，系統會詢問是否允許添加 VPN 設定；之後 WrapPin 會自動啟動本機裝置隧道。";
+"Allow WrapPin to add its built-in VPN when prompted." = "系統提示時，允許 WrapPin 添加內置 VPN。";
+"WrapPin can use this record with its built-in device tunnel." = "內置裝置隧道連接後，WrapPin 可以使用這份配對記錄。";
+"Start reporting the selected place. WrapPin starts its built-in tunnel automatically." = "將選中的地點報告為這部 iPhone 的位置。WrapPin 會自動啟動內置隧道。";
+"Pair this iPhone once so WrapPin can identify it through its built-in tunnel." = "配對本機一次，WrapPin 即可通過內置隧道識別它。";
+"Erase the pairing record and all saved app choices, then return to onboarding. Existing VPN configurations remain in iOS Settings." = "清除配對記錄和本機設定，然後返回首次使用引導。已有 VPN 設定仍保留在 iOS 設定中。";
+"Allow WrapPin's built-in VPN when prompted." = "系統提示時允許添加 WrapPin 內置 VPN。";
+"This clears the pairing record and local app settings, then shows onboarding again. VPN configurations remain in iOS Settings." = "這會清除配對記錄與本機設定，然後重新顯示首次使用引導。VPN 設定仍保留在 iOS 設定中。";
+"Use Built-in Tunnel for Location Sessions" = "模擬定位時使用內置隧道";
+"Start Tunnel" = "開啟隧道";
+"Stop Tunnel" = "關閉隧道";
+"Tunnel" = "隧道";
+"WrapPin starts the tunnel when a location session needs it and stops it after a successful restore. A tunnel started here stays on until you stop it. iOS may ask you to allow a VPN configuration the first time." = "模擬定位需要時，WrapPin 會啟動隧道；成功恢復真實位置後會關閉。在這裏手動開啟的隧道會保持連接，直到你手動關閉。首次使用時，iOS 可能會請求添加 VPN 設定。";
+"Needs Attention" = "需要處理";
+"Addresses" = "地址";
+"Local Address" = "本機地址";
+"Peer Address" = "對端地址";
+"Edit Local Address" = "修改本機地址";
+"The default address matches this build's existing tunnel. Change only the local IPv4 address if another tool needs a different one. The peer stays at 10.7.0.1. Changes take effect the next time the tunnel starts." = "預設地址沿用已驗證的隧道設定。僅當其他工具需要不同的本機地址時才修改；對端地址保持 10.7.0.1。修改會在下次開啟隧道時生效。";
+"How It Works" = "使用説明";
+"The tunnel routes only the paired iPhone's 10.7.0.1 connection. Other traffic keeps using your normal network. iOS allows one active VPN at a time, so starting this tunnel may disconnect another VPN." = "隧道只處理連接已配對 iPhone 的 10.7.0.1 流量；其他流量繼續走原有網絡。iOS 同時只能啓用一個 VPN，開啟本隧道可能會斷開其他 VPN。";
+"The app and its tunnel extension both need signing profiles that allow Packet Tunnel. If iOS rejects the VPN configuration, check the signed installation and the VPN entry in iPhone Settings." = "App 和內置擴展的簽名設定都必須允許 Packet Tunnel。若 iOS 拒絕 VPN 設定，請檢查簽名後的安裝檔，以及 iPhone 設定中的 VPN 條目。";
+"Local IPv4/CIDR" = "本機 IPv4/CIDR";
+"Restore Default Address" = "恢復預設地址";
+"For example, 10.7.0.2/30" = "例如 10.7.0.2/30";
+"Use an IPv4 address with a prefix, such as 10.7.0.2/30. Do not use the peer address 10.7.0.1." = "請輸入帶前綴的 IPv4 地址，例如 10.7.0.2/30。不要使用對端地址 10.7.0.1。";
+"Enter a valid local IPv4 address and prefix. It must differ from 10.7.0.1." = "請輸入有效的本機 IPv4 地址和前綴，且不能與 10.7.0.1 相同。";
+"VPN Configuration Disabled" = "VPN 設定已關閉";
+"Built-in tunnel did not connect in time. Check the VPN configuration and signing permissions, then try again." = "內置隧道連接超時。請檢查 VPN 設定和簽名權限後再試一次。";
+"iOS still keeps this VPN configuration disabled. Open Settings > General > VPN & Device Management > VPN, enable WrapPin, then try again. If it cannot be enabled, check both signing profiles." = "iOS 仍將這條 VPN 設定保持關閉。請到「設定 → 一般 → VPN 與裝置管理 → VPN」啓用 WrapPin 後再試一次；若無法啓用，請檢查 App 和擴展的兩份簽名設定。";
+"The VPN configuration changed. Close this page and try again." = "VPN 設定已發生變化。請關閉本頁後再試一次。";
+"Could not start the built-in tunnel (%@). Check VPN approval and signing permissions, then try again." = "無法開啟內置隧道（%@）。請檢查 VPN 授權和簽名權限後再試一次。";
+"iOS could not read or save the VPN configuration. Check VPN approval and the app and extension signing profiles, then try again." = "iOS 無法讀取或儲存 VPN 設定。請檢查 VPN 授權，以及 App 和擴展的簽名設定後再試一次。";
+
+/* Session interruption and bounded location writes */
+"The iPhone did not confirm the selected location in time." = "iPhone 未在規定時間內確認所選位置，請檢查裝置通道後再試一次。";
+"The iPhone did not confirm updating the location in time." = "iPhone 未在規定時間內確認位置更新，請檢查裝置通道後再試一次。";
+"This is the last location you set, not confirmation that it is still active." = "這是上次設定的位置，不代表當前仍在生效。";
+"Resuming the previous session…" = "正在繼續上次的模擬…";
+
+/* Optional background location indicator */
+"Reduce Background Location Indicator" = "減少背景定位指示器";
+"Background Location Indicator" = "背景定位指示器";
+"Location Authorization" = "定位授權";
+"While Using the App" = "使用 App 期間";
+"Always" = "永遠";
+"Denied" = "已拒絕";
+"Restricted" = "受限制";
+"Open iOS Settings" = "開啟系統設定";
+"Always access has not been granted. If the upgrade prompt does not appear or you previously declined it, open iOS Settings and choose Always. The indicator remains visible until access is granted." = "尚未獲得「永遠」定位權限。如果升級提示沒有出現，或你之前拒絕過升級，請開啟系統設定選擇「永遠」。授權前仍會顯示定位指示器。";
+"Optional and off by default. Enabling requires Always location access to hide the blue location indicator while keeping a simulation active in the background. iOS may periodically remind you that WrapPin uses location in the background. Coordinates received for background keep-alive are never saved or uploaded." = "可選功能，預設關閉。開啟後需要「永遠」定位權限，用於在背景保持模擬時不顯示藍色定位指示器。iOS 可能會定期提醒 WrapPin 在背景使用位置。背景保持收到的座標不會儲存或上傳。";
+"Turning this off restores the indicator but cannot revoke Always access. You can change access back to While Using the App in iOS Settings." = "關閉後恢復顯示指示器，但 App 無法撤回「永遠」權限。你可以在系統設定中改回「使用 App 期間」。";
+"Location Indicator" = "定位指示器";
+"Hide While Active" = "執行時隱藏";
+"Show While Active" = "執行時顯示";
+"The indicator status reflects WrapPin's requested behavior during background keep-alive. iOS controls its final appearance." = "指示器狀態表示 WrapPin 在背景保持時請求的顯示方式，最終顯示由 iOS 決定。";
+
+/* Upstream acknowledgement in Settings */
+"WrapPin is based on earlier [Roam Control](https://github.com/seanhowarthdev/Roam-Control) source releases by Sean Howarth. Thank you for sharing the original project." = "WrapPin 基於 Sean Howarth 早期公開的 [Roam Control](https://github.com/seanhowarthdev/Roam-Control) 原始碼開發，感謝原作者的分享。";
+
+/* Tunnel handoff and compatibility */
+"This setting chooses which app WrapPin opens for tunnel setup; it does not limit which apps are compatible. Other VPN or proxy apps can also be used if they provide a correctly configured device tunnel. Enable their tunnel manually first." = "此設定用於選擇自動跳轉的應用，不限制可使用的代理軟件。其他代理或 VPN 軟件只要已正確設定兼容的裝置隧道，也可手動開啟後直接使用。";
+
+/* App Shortcuts */
+"Shortcuts" = "捷徑";
+"Simulate Favourite Place" = "模擬收藏地點";
+"Simulate Favourite" = "模擬收藏地點";
+"Simulate ${place}" = "模擬${place}";
+"Favourite Place" = "收藏地點";
+"Opens WrapPin and starts simulating a saved favourite place on this iPhone." = "開啟 WrapPin，並在這部 iPhone 上開始模擬一個已收藏的地點。";
+"Starting %@. Check WrapPin for the connection." = "正在開始模擬「%@」，可在 WrapPin 中查看連接狀態。";
+"Stop and Restore Real Location" = "停止並恢復真實位置";
+"Opens WrapPin, stops the running simulation or restores the real location after an interrupted one, and waits for the result." = "開啟 WrapPin，停止正在進行的模擬，或在模擬意外中斷後恢復真實位置，並等待結果。";
+"The real location is restored." = "已恢復真實位置。";
+"No simulation is running." = "當前沒有進行中的模擬。";
+"Open WrapPin and finish setup first." = "請先開啟 WrapPin 完成設定。";
+"Pair this iPhone in WrapPin first." = "請先在 WrapPin 中配對這部 iPhone。";
+"This favourite place is no longer saved in WrapPin." = "這個收藏地點已不在 WrapPin 中。";
+"A simulation was interrupted. Choose to restore or continue it in WrapPin first." = "有一次模擬意外中斷，請先在 WrapPin 中選擇恢復或繼續。";
+"A route simulation is running. Stop it in WrapPin first." = "正在進行路線模擬，請先在 WrapPin 中停止。";
+"WrapPin is busy with another location action. Try again when it finishes." = "WrapPin 正在處理另一個定位操作，請在完成後再試一次。";
+"The real location could not be restored. Check WrapPin for details." = "未能恢復真實位置，請在 WrapPin 中查看詳細資料。";
+"Restoring is still in progress. Check WrapPin for the result." = "仍在恢復中，請在 WrapPin 中查看結果。";
+"WrapPin adds two ready-made shortcuts to the Shortcuts app. Nothing needs to be installed." = "WrapPin 會在「捷徑」App 中自動提供兩條現成的捷徑，無需另外安裝。";
+"Choose a saved favourite when it runs. WrapPin opens and starts simulating that place with the coordinate mode last used there." = "執行時選擇一個收藏地點。WrapPin 會開啟並開始模擬該地點，座標模式沿用這個地點上次的選擇。";
+"Stops the running simulation, or restores the real location after an interrupted one, and reports the result." = "停止正在進行的模擬，或在模擬意外中斷後恢復真實位置，並告知結果。";
+"Before You Start" = "使用前";
+"Pair this iPhone and save at least one favourite place." = "請先完成配對，並至少收藏一個地點。";
+"WrapPin opens while a shortcut runs. If the device connection is unavailable, it may also open the selected tunnel app." = "執行捷徑時會開啟 WrapPin；如果裝置連接不可用，還可能開啟所選的隧道應用。";
+"If a simulation was interrupted, choose to restore or continue it in WrapPin before starting a new one." = "如果有模擬意外中斷，請先在 WrapPin 中選擇恢復或繼續，再開始新的模擬。";
+"Automation" = "自動化";
+"In the Shortcuts app, open Automation, create a personal automation such as Arrive, Leave or Time of Day, then add a WrapPin action." = "在「捷徑」App 中開啟「自動化」，新建「到達」「離開」或「特定時間」等個人自動化，然後添加 WrapPin 的操作。";
+"Siri" = "Siri";
+"Say “Simulate a favourite with %@” or “Restore my real location with %@”." = "可以説「用%@模擬收藏地點」或「用%@恢復真實位置」。";
+"Opens WrapPin's page in the Shortcuts app, where both shortcuts can be run or added to an automation." = "開啟「捷徑」App 中的 WrapPin 頁面，可在那裏執行這兩條捷徑或把它們加入自動化。";
+
+/* Overseas search */
+"Search overseas places or coordinates" = "搜尋海外地點或輸入座標";
+"Overseas" = "海外";
+"Domestic" = "國內";
+"Overseas search" = "海外搜尋";
+"Switches between domestic and overseas place search" = "在國內和海外地點搜尋之間切換";
+"This iPhone has reached today's overseas search limit. You can paste coordinates instead." = "這部 iPhone 今天的海外搜尋次數已用完，可以改為直接貼上座標。";
+"Overseas search could not be reached. In mainland China it may need a proxy; you can also paste coordinates instead." = "無法連接海外搜尋服務。在中國大陸可能需要開啟代理才能使用，也可以直接貼上座標。";
+"Overseas search is unavailable right now. You can paste coordinates instead." = "海外搜尋暫時不可用，可以改為直接貼上座標。";
+"No overseas place found. Try the local or English name, or paste coordinates." = "沒有找到海外地點。可以試試當地語言或英文名稱，或直接貼上座標。";
+"House number" = "門牌";
+"Street" = "街道";
+"City" = "城市";
+"Region" = "地區";
+"Country" = "國家";
+"Approximate" = "大致位置";
+"Dismisses this message" = "關閉此提示";
+
+/* iOS 26 computer pairing */
+"Import an RPPairing file" = "匯入 RPPairing 配對檔案";
+"Import RPPairing File" = "匯入 RPPairing 檔案";
+"Paste RPPairing from Clipboard" = "從剪貼簿貼上 RPPairing";
+"Could Not Import Pairing File" = "無法匯入配對檔案";
+"Create a pairing file on your computer" = "在電腦上生成配對檔案";
+"Download idevice_pair" = "下載 idevice_pair";
+"On iOS 26, create an RPPairing file with idevice_pair on your computer, then import it here." = "iOS 26 需要先用電腦上的 idevice_pair 生成 RPPairing 配對檔案，再到這裏匯入。";
+"On iOS 26, use idevice_pair on a computer once to create a Remote pairing file. The next screen explains how to import it." = "iOS 26 需要用電腦上的 idevice_pair 完成一次遠程配對，生成配對檔案。下一頁會説明如何匯入。";
+"Download idevice_pair on your Mac, Windows or Linux computer." = "在 Mac、Windows 或 Linux 電腦上下載 idevice_pair。";
+"Connect this iPhone by USB, unlock it and tap Trust when asked." = "用 USB 連接這部 iPhone，解鎖後按提示輕點「信任」。";
+"Select this iPhone in idevice_pair, choose Remote pairing (RPPairing), then create and save the file." = "在 idevice_pair 中選擇這部 iPhone，選擇 Remote pairing（RPPairing），然後生成並儲存檔案。";
+"Transfer the file to this iPhone, save it in Files, then tap Import RPPairing File above." = "把檔案傳到這部 iPhone，儲存到「檔案」App，然後輕點上方的「匯入 RPPairing 檔案」。";
+"Choose Remote pairing, not Lockdown. A SideStore .mobiledevicepairing file is not a substitute for an RPPairing file." = "請選擇 Remote pairing，不要選擇 Lockdown。SideStore 使用的 .mobiledevicepairing 檔案不能代替 RPPairing 檔案。";
+"Import this iPhone's RPPairing file created with idevice_pair on your computer." = "匯入通過電腦上的 idevice_pair 為這部 iPhone 生成的 RPPairing 檔案。";
+"Copy the XML contents of your RPPairing file, then try pasting again." = "請先複製 RPPairing 檔案中的 XML 內容，再嘗試貼上。";
+"The pairing file could not be opened. Save it in Files and try importing it again." = "無法開啟配對檔案。請先把檔案儲存到「檔案」App，再嘗試匯入。";
+"Stop the current session before changing its pairing file." = "請先停止當前工作階段，再更換配對檔案。";
+"That file is not a valid property list." = "這個檔案不是有效的屬性列表檔案。";
+"That is not a valid RPPairing file." = "這不是有效的 RPPairing 配對檔案。";
+"This is a Lockdown pairing file. In idevice_pair on your computer, choose Remote pairing (RPPairing), create a new file, and import it here." = "這是 Lockdown 配對檔案。請在電腦上的 idevice_pair 中選擇 Remote pairing（RPPairing），重新生成檔案後匯入。";
+"This RPPairing file is missing its device identity. Create a new Remote pairing file with idevice_pair and import it again." = "這個 RPPairing 檔案缺少裝置身份資訊。請用 idevice_pair 重新生成 Remote pairing 檔案，再次匯入。";
+"The pairing file's public and private keys do not match." = "配對檔案中的公開金鑰和私密金鑰不匹配。";
+"The generated pairing identity was not valid." = "產生的配對身分無效。";
+"The stored pairing record could not be read." = "無法讀取已儲存的配對記錄。";
+"The pairing record could not be stored securely (Keychain error %d)." = "無法安全儲存配對記錄（鑰匙圈錯誤 %d）。";
+"Connect this device by USB, unlock it and tap Trust when asked." = "用 USB 連接這部裝置，解鎖後按提示輕點「信任」。";
+"Import this device's RPPairing file created with idevice_pair on your computer." = "匯入通過電腦上的 idevice_pair 為這部裝置生成的 RPPairing 檔案。";
+"Pair This Device" = "配對這部裝置";
+"Pair this device" = "配對本機";
+"Select this device in idevice_pair, choose Remote pairing (RPPairing), then create and save the file." = "在 idevice_pair 中選擇這部裝置，選擇 Remote pairing（RPPairing），然後生成並儲存檔案。";
+"Set Up This Device" = "設定這部裝置";
+"Set up device" = "設定本機";
+"Transfer the file to this device, save it in Files, then tap Import RPPairing File above." = "把檔案傳到這部裝置，儲存到「檔案」App，然後輕點上方的「匯入 RPPairing 檔案」。";
+"On iOS 18–26, use idevice_pair on a computer once to create a Remote pairing file. The next screen explains how to import it." = "iOS 18–26 需要用電腦上的 idevice_pair 完成一次遠程配對，生成配對檔案。下一頁會説明如何匯入。";
+"On iOS 18–26, create an RPPairing file with idevice_pair on your computer, then import it here." = "iOS 18–26 需要先用電腦上的 idevice_pair 生成 RPPairing 配對檔案，再到這裏匯入。";
+"Show Details" = "展開詳細資料";
+"Hide Details" = "收起詳細資料";
+"Map Controls" = "地圖控制";
+"Hide Controls" = "收起控制面板";
+"Show Controls" = "顯示控制面板";
+
+// Custom walking routes
+"A route needs at least two different points with valid latitude and longitude." = "路線至少需要兩個不同的點，且經緯度必須有效。";
+"Add" = "添加";
+"Add route point" = "添加路線點";
+"Choose GPX segment" = "選擇 GPX 軌跡段";
+"Choose a valid GPX file containing a track segment or route with at least two points." = "請選擇有效的 GPX 檔案，包含至少兩個點的軌跡段或路線。";
+"Custom route destination" = "自訂路線終點";
+"Custom route start to destination" = "自訂起點至終點";
+"Custom walking route" = "自訂步行路線";
+"Delete route point" = "刪除路線點";
+"Import GPX" = "匯入 GPX";
+"Importing GPX…" = "正在匯入 GPX…";
+"Move point earlier" = "將路線點前移";
+"Move point later" = "將路線點後移";
+"Preview Route" = "預覽路線";
+"Route calculation and GPX processing stay on this device. Map tiles may still need an internet connection." = "路線計算和 GPX 處理均在本機完成。地圖顯示仍可能需要網絡連接。";
+"Segment %lld · %lld points" = "軌跡段 %lld · %lld 個點";
+"Tap the map in order: start, waypoints, then destination. Points are joined directly without following roads." = "在地圖上依次點選起點、途經點和終點。各點直接連線，不會自動沿道路規劃。";
+"Undo last point" = "撤銷最後一點";
+"Use Add route point to enter coordinates without tapping the map." = "可使用「添加路線點」輸入座標，無需點選地圖。";
+"Use a GPX file smaller than 5 MB with at most 10,000 points." = "請使用不超過 5 MB、最多包含 10,000 個點的 GPX 檔案。";
+"Waypoint %lld" = "途經點 %lld";
+"GPX coordinates use WGS84 by default." = "GPX 座標預設使用 WGS84。";
+"Edit Route" = "編輯路線";
+"Coordinate mode" = "座標模式";
+"Clear all route points?" = "清空全部路線點？";
+"Clear Route" = "清空路線";
+
+// Search-based route point editing
+"Add waypoint" = "添加途經點";
+"Adds this place to the route" = "將此地點加入路線";
+"Choose a place to add to the route" = "選擇要加入路線的地點";
+"Choose destination" = "選擇終點";
+"Choose route start" = "選擇起點";
+"Enter a place name or address, then choose a result. You can also paste coordinates. Place search requires an internet connection." = "輸入地點名稱或地址，再從結果中選擇。也可以貼上座標。地點搜尋需要網絡連接。";
+"Map point" = "地圖選點";
+"Replace route point" = "更換路線點";
+"Search for a place or address" = "搜尋地點或地址";
+"Search to set the start, destination and waypoints, or tap the map in order. Points are joined directly without following roads." = "搜尋設定起點、終點和途經點，也可依次點選地圖。各點直接連線，不自動沿道路規劃。";
+"Searches for a replacement route point" = "搜尋並更換此路線點";
+"Use the route list to search for a start, destination or waypoint without tapping the map." = "可在路線列表中搜尋起點、終點或途經點，無需點選地圖。";
+"Undo route edit" = "撤銷上次修改";
+
+// Route editor usability review
+"Choose at least two different route points to preview." = "請先選擇至少兩個不同的路線點。";
+"Discard Changes" = "放棄修改";
+"Discard route changes?" = "放棄本次路線修改？";
+"Ending at %@" = "終點：%@";
+"Keep Editing" = "繼續編輯";
+"Route point actions" = "路線點操作";
+"Route points" = "路線點";
+"Show route point" = "在地圖上查看此點";
+"Route options" = "路線選項";
+"Search or tap the map. Points connect directly." = "搜尋或點選地圖，各點直接連線。";
+"Route needs attention" = "無法使用這條路線";
+
+"Add this point" = "添加這個點";
+
+"Edit route" = "編輯路線";
+
+"Move the map to position the crosshair" = "移動地圖，將十字中心對準所需位置";
+
+"Pick on map" = "地圖選點";
+
+"Expand route panel" = "展開路線面板";
+
+"Collapse route panel" = "收起路線面板";
+
+"Route panel handle" = "面板拖動條";
+
+"Reorder route point" = "長按拖動排序";
+
+"Move the map to position the pin" = "移動地圖，將圖釘尖端對準所需位置";
+
+"Full panel" = "大屏展開";
+
+"Half panel" = "半展開";
+
+"Compact panel" = "已收起";
+
+"Opens place search" = "開啟地點搜尋";
+
+"Search for a place, or tap the map to choose one." = "搜尋地點，或輕點地圖選取位置。";
+
+"Clear all route points" = "清空全部路線點";
+
+"This removes every route point. Use Undo last change to restore them." = "這會移除整條路線的所有地點。清空後可通過「撤銷上次修改」恢復。";
+
+"Tap the map to select a point" = "輕點地圖選擇位置";
+
+"Tap elsewhere to change the selected point" = "已選中，輕點其他位置可更換";
+
+"Selected point" = "已選位置";
+
+"Removes only this point" = "僅移除這個地點";
+
+"Points connect with straight lines in order. Hold the right handle to reorder." = "地點按順序直線連接，長按右側手柄可調整順序。";
+
+"Custom route" = "自訂路線";
+
+"Movement type" = "移動方式";
+
+"On foot" = "步行";
+
+"By car" = "駕駛";
+
+"Simulation speed" = "模擬速度";
+
+"First, choose the start" = "第一步：選擇起點";
+
+"Next, choose the destination" = "第二步：選擇終點";
+
+"Add a waypoint before the destination" = "添加途經點（插入終點前）";
+
+"Set as start" = "設為起點";
+
+"Set as destination" = "設為終點";
+
+"Start route simulation" = "開始路線模擬";
+
+"Simulating route" = "路線模擬中";
+
+"Route paused" = "路線已暫停";
+
+"Starting route simulation…" = "正在啟動路線模擬…";
+
+"Preparing route" = "正在準備路線";
+
+"Follow route back" = "沿原路線返回";
+
+"Your location follows these points at the selected speed." = "位置將按所選速度沿路線點移動。";
+
+/* Cycling simulation and external tunnel setup */
+"Cycling route" = "單車路線";
+"Cycling routes" = "單車路線";
+"Preview Cycle" = "預覽單車";
+"Start Cycling" = "開始單車模擬";
+"Starting cycling session…" = "正在啟動單車模擬…";
+"Preparing cycle" = "正在準備單車路線";
+"Cycling" = "正在踩單車";
+"Cycle paused" = "單車模擬已暫停";
+"Resume Cycling" = "繼續單車模擬";
+"Cycling to %@" = "踩單車前往 %@";
+"WrapPin closed before it could confirm that the simulated cycle to %@ ended. Continue from the last saved point or restore this iPhone's real location." = "WrapPin 關閉前未能確認前往 %@ 的模擬單車已結束。可從上次儲存的位置繼續，或恢復本機真實位置。";
+"No cycling route was found for this destination. Apple Maps cycling directions are not available in every region. You can draw a custom route or import GPX instead." = "沒有找到前往該地點的單車路線。Apple 地圖並非在所有地區都提供單車路線，可改為繪製自訂路線或匯入 GPX。";
+"Cycling directions are unavailable. Check Location access and your internet connection. If Apple Maps has no cycling coverage here, draw a custom route or import GPX instead." = "暫時無法規劃單車路線。請檢查定位權限和網絡。如果 Apple 地圖不支援此地區的單車路線，可改為繪製自訂路線或匯入 GPX。";
+"Cycling speed" = "單車速度";
+"Simulated cycling speed" = "模擬單車速度";
+"Constant route speed · 1–60 km/h" = "勻速沿路線移動 · 1–60 公里／小時";
+"Follow simulated bicycle" = "跟隨模擬單車";
+"Search for a place or tap the map, then start a fixed location or preview a walking, cycling or driving route." = "搜尋地點或輕點地圖，即可模擬固定位置，也可以先預覽步行、單車或駕駛路線。";
+"Start a fixed location or preview a walking, cycling or driving route." = "開始固定位置模擬，或先預覽步行、單車或駕駛路線。";
+"Fixed, walking, cycling or driving session started" = "開始固定位置、步行、單車或駕駛模擬";
+"Ask Apple Maps for cycling directions. Coverage varies by region; if no cycling route is available, draw a custom route or import GPX. Walking or driving routes are never substituted automatically." = "通過 Apple 地圖規劃單車路線。支援範圍因地區而異；若無單車路線，可繪製自訂路線或匯入 GPX。不會自動替換為步行或駕駛路線。";
+"Set a constant cycling speed from 1 to 60 km/h. The default is 18 km/h. You can pause, resume and restore just like other routes." = "可設定 1–60 公里／小時的勻速單車模擬速度，預設為 18 公里／小時。與其他路線一樣，支援暫停、繼續以及恢復真實位置。";
+"Already use a compatible tunnel? Choose it here; LocalDevVPN is not required." = "已在使用兼容的隧道？可在這裏選擇，無需安裝 LocalDevVPN。";
+"In Shadowrocket, enable Include Route 10.7.0.1/32 in Settings, connect its VPN, then return to WrapPin." = "在 Shadowrocket 的「設定」中開啟「包含路由 10.7.0.1/32」，連接 VPN 後返回 WrapPin。";
+
+/* Privacy disclosure rows */
+"Coordinates or place names" = "座標或地點名稱";
+"Searches, favourites, history or routes" = "搜尋、收藏、歷史記錄或路線";
+"Pairing records or PINs" = "配對記錄或 PIN";
+"Apple ID, device name or personal details" = "Apple ID、裝置名稱或個人資料";
+"Raw error messages or credentials" = "錯誤原文或帳戶憑證";
+"Diagnostic reports" = "診斷報告";

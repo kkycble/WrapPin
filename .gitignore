@@ -31,9 +31,11 @@ Native/WrapPinPairingFFI/target/
 *.secret
 Secrets.plist
 
-# Temporary files
+# Temporary files and local tooling caches
 *.swp
 *.tmp
+.cache/
+__pycache__/
 
 # Local private configuration
 Configuration/Local.private.xcconfig

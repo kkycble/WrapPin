@@ -972,3 +972,37 @@
 "Follow route back" = "沿原路线返回";
 
 "Your location follows these points at the selected speed." = "位置将按所选速度沿路线点移动。";
+
+/* Cycling simulation and external tunnel setup */
+"Cycling route" = "骑行路线";
+"Cycling routes" = "骑行路线";
+"Preview Cycle" = "预览骑行";
+"Start Cycling" = "开始模拟骑行";
+"Starting cycling session…" = "正在启动模拟骑行…";
+"Preparing cycle" = "正在准备骑行路线";
+"Cycling" = "骑行中";
+"Cycle paused" = "骑行已暂停";
+"Resume Cycling" = "继续模拟骑行";
+"Cycling to %@" = "骑行前往 %@";
+"WrapPin closed before it could confirm that the simulated cycle to %@ ended. Continue from the last saved point or restore this iPhone's real location." = "WrapPin 关闭前未能确认前往 %@ 的模拟骑行已结束。可从上次保存的位置继续，或恢复本机真实位置。";
+"No cycling route was found for this destination. Apple Maps cycling directions are not available in every region. You can draw a custom route or import GPX instead." = "没有找到前往该地点的骑行路线。Apple 地图并非在所有地区都提供骑行路线，可改为绘制自定义路线或导入 GPX。";
+"Cycling directions are unavailable. Check Location access and your internet connection. If Apple Maps has no cycling coverage here, draw a custom route or import GPX instead." = "暂时无法规划骑行路线。请检查定位权限和网络。如果 Apple 地图不支持此地区的骑行路线，可改为绘制自定义路线或导入 GPX。";
+"Cycling speed" = "骑行速度";
+"Simulated cycling speed" = "模拟骑行速度";
+"Constant route speed · 1–60 km/h" = "匀速沿路线移动 · 1–60 公里/小时";
+"Follow simulated bicycle" = "跟随模拟单车";
+"Search for a place or tap the map, then start a fixed location or preview a walking, cycling or driving route." = "搜索地点或轻点地图，即可模拟固定位置，也可以先预览步行、骑行或驾车路线。";
+"Start a fixed location or preview a walking, cycling or driving route." = "开始固定位置模拟，或先预览步行、骑行或驾车路线。";
+"Fixed, walking, cycling or driving session started" = "开始固定位置、步行、骑行或驾车模拟";
+"Ask Apple Maps for cycling directions. Coverage varies by region; if no cycling route is available, draw a custom route or import GPX. Walking or driving routes are never substituted automatically." = "通过 Apple 地图规划骑行路线。支持范围因地区而异；若无骑行路线，可绘制自定义路线或导入 GPX。不会自动替换为步行或驾车路线。";
+"Set a constant cycling speed from 1 to 60 km/h. The default is 18 km/h. You can pause, resume and restore just like other routes." = "可设置 1–60 公里/小时的匀速骑行模拟速度，默认为 18 公里/小时。与其他路线一样，支持暂停、继续以及恢复真实位置。";
+"Already use a compatible tunnel? Choose it here; LocalDevVPN is not required." = "已在使用兼容的隧道？可在这里选择，无需安装 LocalDevVPN。";
+"In Shadowrocket, enable Include Route 10.7.0.1/32 in Settings, connect its VPN, then return to WrapPin." = "在 Shadowrocket 的“设置”中开启“包含路由 10.7.0.1/32”，连接 VPN 后返回 WrapPin。";
+
+/* Privacy disclosure rows */
+"Coordinates or place names" = "坐标或地点名称";
+"Searches, favourites, history or routes" = "搜索、收藏、历史记录或路线";
+"Pairing records or PINs" = "配对记录或 PIN";
+"Apple ID, device name or personal details" = "Apple ID、设备名称或个人资料";
+"Raw error messages or credentials" = "错误原文或账号凭据";
+"Diagnostic reports" = "诊断报告";

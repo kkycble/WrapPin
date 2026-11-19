@@ -121,6 +121,19 @@ struct AboutWrapPinView: View {
                 )
             }
 
+            Section("Cycling routes") {
+                guideRow(
+                    "Preview Cycle",
+                    symbol: "bicycle",
+                    text: "Ask Apple Maps for cycling directions. Coverage varies by region; if no cycling route is available, draw a custom route or import GPX. Walking or driving routes are never substituted automatically."
+                )
+                guideRow(
+                    "Cycling speed",
+                    symbol: "speedometer",
+                    text: "Set a constant cycling speed from 1 to 60 km/h. The default is 18 km/h. You can pause, resume and restore just like other routes."
+                )
+            }
+
             Section("Driving routes") {
                 guideRow(
                     "Preview Drive",
@@ -203,7 +216,7 @@ struct AboutWrapPinView: View {
                 stepRow(2, "Connect \(appModel.tunnelHandoffApp.title).")
             }
             stepRow(3, "Search, choose or drop a location.")
-            stepRow(4, "Start a fixed location or preview a walking or driving route.")
+            stepRow(4, "Start a fixed location or preview a walking, cycling or driving route.")
         } header: {
             Text("How it works")
         } footer: {

@@ -2,20 +2,6 @@ import CoreLocation
 import MapKit
 import Observation
 
-enum RouteMode: String, Codable, CaseIterable, Identifiable {
-    case walking
-    case driving
-
-    var id: Self { self }
-    var transportType: MKDirectionsTransportType {
-        self == .walking ? .walking : .automobile
-    }
-    var title: String {
-        self == .walking ? String(localized: "Walking route") : String(localized: "Driving route")
-    }
-    var symbol: String { self == .walking ? "figure.walk" : "car.fill" }
-}
-
 @MainActor
 @Observable
 final class WalkingRoutePlanner {
@@ -74,9 +60,7 @@ final class WalkingRoutePlanner {
             let response = try await calculation.calculate()
             guard directions === calculation else { return nil }
             guard let preferredRoute = response.routes.first else {
-                errorMessage = mode == .walking
-                    ? String(localized: "No walking route was found for this destination.")
-                    : String(localized: "No driving route was found for this destination.")
+                errorMessage = mode.noRouteMessage
                 return nil
             }
 
@@ -86,9 +70,7 @@ final class WalkingRoutePlanner {
             return nil
         } catch {
             guard directions === calculation else { return nil }
-            errorMessage = mode == .walking
-                ? String(localized: "Walking directions are unavailable. Check Location access and your internet connection, then try again.")
-                : String(localized: "Driving directions are unavailable. Check Location access and your internet connection, then try again.")
+            errorMessage = mode.directionsUnavailableMessage
             return nil
         }
     }

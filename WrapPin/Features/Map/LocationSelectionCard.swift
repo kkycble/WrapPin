@@ -93,13 +93,15 @@ struct LocationSelectionCard: View {
                     MapPanelDetails(progress: expansion) {
                     if dynamicTypeSize.isAccessibilitySize {
                         VStack(spacing: 8) {
-                            routePreviewButton(for: .walking)
-                            routePreviewButton(for: .driving)
+                            ForEach(RouteMode.allCases) { mode in
+                                routePreviewButton(for: mode)
+                            }
                         }
                     } else {
                         HStack(spacing: 8) {
-                            routePreviewButton(for: .walking)
-                            routePreviewButton(for: .driving)
+                            ForEach(RouteMode.allCases) { mode in
+                                routePreviewButton(for: mode)
+                            }
                         }
                         .transition(detailTransition)
                     }
@@ -223,10 +225,7 @@ struct LocationSelectionCard: View {
                 } else {
                     Image(systemName: mode.symbol)
                 }
-                Text(
-                    mode == .walking
-                        ? String(localized: "Preview Walk") : String(localized: "Preview Drive")
-                )
+                Text(mode.previewTitle)
                 .lineLimit(1)
                 .minimumScaleFactor(0.85)
             }

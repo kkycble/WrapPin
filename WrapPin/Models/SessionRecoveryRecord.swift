@@ -4,6 +4,7 @@ struct SessionRecoveryRecord: Codable, Equatable {
     enum Kind: String, Codable {
         case fixedLocation
         case walkingRoute
+        case cyclingRoute
         case drivingRoute
     }
 
@@ -11,7 +12,7 @@ struct SessionRecoveryRecord: Codable, Equatable {
     var lastReportedLocation: LocationTarget
     var destination: LocationTarget?
     // Kept under its original persisted name for backward compatibility.
-    // The selected mode now applies to fixed, walking, and driving sessions.
+    // The selected mode applies to fixed, walking, cycling and driving sessions.
     var fixedCoordinateMode: FixedCoordinateMode?
     var walkingPaceMetresPerSecond: Double?
     var routeSpeedMetresPerSecond: Double?
@@ -22,11 +23,15 @@ struct SessionRecoveryRecord: Codable, Equatable {
     var updatedAt: Date
 
     var isRoute: Bool {
-        (kind == .walkingRoute || kind == .drivingRoute) && destination != nil
+        kind != .fixedLocation && destination != nil
     }
 
     var routeMode: RouteMode {
-        kind == .drivingRoute ? .driving : .walking
+        switch kind {
+        case .fixedLocation, .walkingRoute: .walking
+        case .cyclingRoute: .cycling
+        case .drivingRoute: .driving
+        }
     }
 
     var savedRouteSpeed: Double? {
@@ -56,8 +61,13 @@ struct SessionRecoveryRecord: Codable, Equatable {
         coordinateMode: FixedCoordinateMode,
         speedMetresPerSecond: Double
     ) -> SessionRecoveryRecord {
-        SessionRecoveryRecord(
-            kind: mode == .walking ? .walkingRoute : .drivingRoute,
+        let kind: Kind = switch mode {
+        case .walking: .walkingRoute
+        case .cycling: .cyclingRoute
+        case .driving: .drivingRoute
+        }
+        return SessionRecoveryRecord(
+            kind: kind,
             lastReportedLocation: start,
             destination: destination,
             fixedCoordinateMode: coordinateMode,

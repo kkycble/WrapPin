@@ -24,6 +24,7 @@ enum WalkingPace: Double, CaseIterable, Identifiable {
 enum WalkingSimulationPhase: Equatable {
     case idle
     case preparing
+    // Historical name for the moving phase of walking, cycling and driving.
     case walking
     case paused
     case arrived
@@ -42,7 +43,8 @@ final class WalkingSimulationController {
     var customWalkingSpeedKilometresPerHour: Double?
     private(set) var mode: RouteMode = .walking
     private(set) var coordinateMode: FixedCoordinateMode = .wgs84
-    var drivingSpeedKilometresPerHour: Double = 80
+    var cyclingSpeedKilometresPerHour: Double = RouteMode.cycling.defaultSpeedKilometresPerHour
+    var drivingSpeedKilometresPerHour: Double = RouteMode.driving.defaultSpeedKilometresPerHour
 
     @ObservationIgnored
     private var routePoints: [MKMapPoint] = []
@@ -80,12 +82,42 @@ final class WalkingSimulationController {
             let speed = customRouteSpeedKilometresPerHour
             return (speed.isFinite ? min(max(speed, 0.1), 240) : 5) / 3.6
         }
-        if mode == .walking {
+        switch mode {
+        case .walking:
             guard let customWalkingSpeedKilometresPerHour,
                   customWalkingSpeedKilometresPerHour.isFinite else { return pace.metresPerSecond }
-            return min(max(customWalkingSpeedKilometresPerHour, 1), 12) / 3.6
+            return mode.clampedSpeedKilometresPerHour(customWalkingSpeedKilometresPerHour) / 3.6
+        case .cycling:
+            return mode.clampedSpeedKilometresPerHour(cyclingSpeedKilometresPerHour) / 3.6
+        case .driving:
+            return mode.clampedSpeedKilometresPerHour(drivingSpeedKilometresPerHour) / 3.6
         }
-        return drivingSpeedKilometresPerHour / 3.6
+    }
+
+    /// Use the same limits for recovery and the live speed calculation. Ignore
+    /// corrupt/non-finite values rather than propagating them into route progress.
+    func restoreSpeed(metresPerSecond savedSpeed: Double) {
+        guard savedSpeed.isFinite else { return }
+        let kilometresPerHour = savedSpeed * 3.6
+        if isCustomRoute {
+            customRouteSpeedKilometresPerHour = kilometresPerHour
+            return
+        }
+        switch mode {
+        case .walking:
+            if let recoveredPace = WalkingPace.allCases.first(where: {
+                abs($0.metresPerSecond - savedSpeed) < 0.0001
+            }) {
+                pace = recoveredPace
+                customWalkingSpeedKilometresPerHour = nil
+            } else {
+                customWalkingSpeedKilometresPerHour = mode.clampedSpeedKilometresPerHour(kilometresPerHour)
+            }
+        case .cycling:
+            cyclingSpeedKilometresPerHour = mode.clampedSpeedKilometresPerHour(kilometresPerHour)
+        case .driving:
+            drivingSpeedKilometresPerHour = mode.clampedSpeedKilometresPerHour(kilometresPerHour)
+        }
     }
 
     var locksDestination: Bool {
@@ -389,7 +421,7 @@ final class WalkingSimulationController {
     ) -> LocationTarget {
         LocationTarget(
             name: String(
-                format: NSLocalizedString(mode == .walking ? "Walking to %@" : "Driving to %@", comment: ""),
+                format: mode.movementNameFormat,
                 destination.name
             ),
             subtitle: String(

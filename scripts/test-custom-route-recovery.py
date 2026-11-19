@@ -20,7 +20,7 @@ def method(marker):
 fakes = r'''
 import Foundation
 import CoreLocation
-enum RouteMode: String, Codable { case walking, driving }
+enum RouteMode: String, Codable { case walking, cycling, driving }
 @MainActor final class Model {
     static let activeSessionRecoveryKey = "custom-route-test"
     let preferences: UserDefaults

@@ -1,7 +1,7 @@
 import Foundation
 
 // Compile the production policy and record outside AppModel/Xcode.
-enum RouteMode: String, Codable { case walking, driving }
+enum RouteMode: String, Codable { case walking, cycling, driving }
 enum FixedCoordinateMode: String, Codable { case gcj02, wgs84 }
 struct LocationTarget: Codable, Equatable { let name: String }
 

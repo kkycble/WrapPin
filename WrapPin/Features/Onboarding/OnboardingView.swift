@@ -198,6 +198,11 @@ private struct OnboardingPageView: View {
                         .padding(.horizontal, 24)
                     }
 
+                    if !page.requirements.isEmpty && !appModel.usesBuiltInTunnel {
+                        tunnelAppCard
+                            .padding(.horizontal, 24)
+                    }
+
                     if page.showsUsageStatisticsControl {
                         usageStatisticsCard
                             .padding(.horizontal, 24)
@@ -235,6 +240,30 @@ private struct OnboardingPageView: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 12)
         .accessibilityElement(children: .combine)
+    }
+
+    private var tunnelAppCard: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Picker("Tunnel App", selection: Binding(
+                get: { appModel.tunnelHandoffApp },
+                set: appModel.setTunnelHandoffApp
+            )) {
+                ForEach(TunnelHandoffApp.allCases) { app in
+                    Text(app.title).tag(app)
+                }
+            }
+            Text("Already use a compatible tunnel? Choose it here; LocalDevVPN is not required.")
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+            if appModel.tunnelHandoffApp == .shadowrocket {
+                Text("In Shadowrocket, enable Include Route 10.7.0.1/32 in Settings, connect its VPN, then return to WrapPin.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(18)
+        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+        .accessibilityElement(children: .contain)
     }
 
     private var usageStatisticsCard: some View {
@@ -292,7 +321,7 @@ private struct OnboardingPage {
         OnboardingPage(
             symbol: "location.viewfinder",
             title: "Welcome to WrapPin",
-            message: "Search for a place or tap the map, then start a fixed location or preview a walking or driving route.",
+            message: "Search for a place or tap the map, then start a fixed location or preview a walking, cycling or driving route.",
             color: .blue
         ),
         OnboardingPage(
